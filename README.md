@@ -5,9 +5,9 @@ Este repositorio contiene todos los materiales necesarios para crear a "Dinoco",
 ##  Contenido 
 
 - Miembros del equipo 
-- introduccion 
-- diseño adaptado 
--  Materiales y Componentes
+- Introduccion 
+- Diseño adaptado 
+- Materiales y Componentes
 
 
 ## 📖 Introducción
@@ -55,7 +55,7 @@ En esta seccion se encontraran con un paso a paso de nuestro proceso  de armado,
 
 https://dukedoks.com/portfolio/guia-chasis-rc/
 
-### **archivos de impresion de chasis fotos de la impresion**
+### **Archivos de impresion de chasis y fotos de la impresion**
 
 
 
@@ -71,9 +71,10 @@ Lista detallada de los componentes utilizados:
 
 
 
-**Servo motor FUTABA S3003**
+**Servo motor MG90S**
 
-[![servomotor ](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCsksBOFdDB5BY8tKZa6eUbbB8zCaAIml6zw&s "servomotor ")](http://https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCsksBOFdDB5BY8tKZa6eUbbB8zCaAIml6zw&s "servomotor ")
+<img width="1594" height="1582" alt="servo-metalico jpg-67jpg" src="https://github.com/user-attachments/assets/864eecac-4ec1-4245-a72f-2deb19acc836" />
+
 
 Descripción: Servo estándar de 180° usado en robótica y modelismo, con engranajes de nylon 214.
 
@@ -93,9 +94,10 @@ Desventajas:
 
 3. Voltaje crítico: Requiere regulación precisa (recomendado 6V con UBEC)
 
-**Arduino uno**
+**ESP32**
 
-![Arduino1-3](https://github.com/user-attachments/assets/68743773-d612-4e50-b748-177711cdb51a)
+<img width="1000" height="529" alt="SBC-NodeMCU-ESP32-C_01" src="https://github.com/user-attachments/assets/acf25497-c3d1-482c-a017-23cde340d36b" />
+
 
 
 ✅ 3 Ventajas del Arduino Uno
@@ -141,7 +143,7 @@ Puede ser incómodo para proyectos compactos o portátiles; hay placas más pequ
 
 [![suiche](https://sumador.com/cdn/shop/products/Suichetipobalancinde2pines2.jpg?v=1588622314 "suiche")](http://https://sumador.com/cdn/shop/products/Suichetipobalancinde2pines2.jpg?v=1588622314 "suiche")
 
-**motor motor Makeblock 9VDC de 185 RPM**
+**Motor Makeblock 9VDC de 185 RPM**
 
 ![motor makeblock 9v](https://github.com/user-attachments/assets/8a9cdd8b-57d4-416b-b355-9b4c4810f2ba)
 
@@ -166,4 +168,4 @@ El motor Makeblock 9VDC de 185 RPM es el motor más comúnmente utilizado en la 
 3. Ruido: Los engranajes pueden generar sonido en cargas altas 
 
 
-###End
+### End
