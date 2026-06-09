@@ -73,7 +73,8 @@ Lista detallada de los componentes utilizados:
 
 **Servo motor MG90S**
 
-<img width="1594" height="1582" alt="servo-metalico jpg-67jpg" src="https://github.com/user-attachments/assets/864eecac-4ec1-4245-a72f-2deb19acc836" />
+<img width="1200" height="1200" alt="image" src="https://github.com/user-attachments/assets/8a5d8723-35ca-40f7-a34a-3fabfd5f0480" />
+
 
 
 Descripción: Servo estándar de 180° usado en robótica y modelismo, con engranajes de nylon 214.
