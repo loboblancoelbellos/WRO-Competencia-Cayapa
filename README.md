@@ -136,7 +136,7 @@ Puede ser incómodo para proyectos compactos o portátiles; hay placas más pequ
 
 ![Sin títulopuente h rojo](https://github.com/user-attachments/assets/c998e194-728f-4ca4-acd2-dbf268346189)
 
- **Sensor de ultrasonido de distancia Arduino HC-SR04**
+ **Sensor De Ultrasonido Para Distancia HC-SR04**
 
 ![ultrasinico](https://github.com/user-attachments/assets/902c8c8b-0308-4dfd-9ffe-1c58e8a6bf10)
  
