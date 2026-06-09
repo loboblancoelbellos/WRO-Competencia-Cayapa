@@ -61,13 +61,13 @@ https://dukedoks.com/portfolio/guia-chasis-rc/
 
 ## 🔧 Materiales y Componentes
 Lista detallada de los componentes utilizados:
-- **Chasis de referencias de modelado 3D**
+- **Chasis de referencias modelado en 3D**
 - **Motor DC 9V kit ultimate 2.0**
-- **Servo Motor Futaba S3003 08-sd-025**
-- **Arduino Mega 2560**
+- **Servo Motor MG90S**
+- **ESP32**
 - **Batería de litio 18650 (3 UND)**
 - **Puente H L298N**
-- **Sensor de ultrasonido de distancia Arduino HC-SR04 (3 UND)**
+- **Sensor De Ultrasonido Para Distancia HC-SR04 (3 UND)**
 
 
 
@@ -150,13 +150,13 @@ Puede ser incómodo para proyectos compactos o portátiles; hay placas más pequ
 
 ### **Descripcion**
 
-El motor Makeblock 9VDC de 185 RPM es el motor más comúnmente utilizado en la plataforma Makeblock o proyectos de robotica en general. Está impulsado por corriente continua y es la opción ideal para que las cosas se muevan en todo tipo de proyectos.
+El motor Makeblock 9VDC de 185 RPM es un motor comúnmente utilizado en la plataforma Makeblock o proyectos de robotica en general. Está impulsado por corriente continua y es la opción ideal para mover mecanismos giratorios en todo tipo de proyectos.
 
 ### Ventajas:
 
 1. Alto torque: Ideales para cargas medias gracias a su caja reductora (ejemplo: 185 RPM para modelos de 9V) 
 
-2. Compatibilidad: Integrados con placas como MegaPi (basada en Arduino Mega 2560) 
+2. Compatibilidad: Integrados con placas como MegaPi (basada en Arduino 
 
 3. Durabilidad: Piezas de aluminio anodizado en el kit Ultimate 2.0 9.
 
@@ -169,4 +169,4 @@ El motor Makeblock 9VDC de 185 RPM es el motor más comúnmente utilizado en la 
 3. Ruido: Los engranajes pueden generar sonido en cargas altas 
 
 
-### End
+### Fin
