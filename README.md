@@ -1,6 +1,6 @@
-## 🚀 Documentacion de ingenieria - Innova Tech
+## 🚀 Documentacion de ingenieria - Cayapa
 
-Este repositorio contiene todos los materiales necesarios para crear a "Ledma Tech_MK1", el robot autónomo creado por el equipo "Innova Tech", que participará en la categoría Futuros ingeniero en la Clasificaion de la World Robot Olympiad en la temporada 2025.
+Este repositorio contiene todos los materiales necesarios para crear a "Dinoco", el robot autónomo creado por el equipo "Cayapa", que participará en la categoría Futuros ingeniero en la Clasificaion de la World Robot Olympiad en la temporada 2026.
 
 ##  Contenido 
 
@@ -11,8 +11,7 @@ Este repositorio contiene todos los materiales necesarios para crear a "Ledma Te
 
 
 ## 📖 Introducción
-En este repositorio se observará un arduo proceso tanto de selección, así como de armado del carrito RC, para la categoría Futuros Ingenieros de la WRO. Fue un proceso realizado con gran esfuerzo, independientemente de las dificultades. Un trabajo en equipo y dedicación para dar lo mejor de nosotros en la demostración a los jueces, conociendo las bases de la robótica y aprendiendo mucho en el proceso nos basamos en mecánica, electrónica y programación, pensando siempre en aprender más para presentar así un proyecto capaz de desempeñar óptimamente y autónomamente todos los objetivos.
-
+En este repositorio esta planteado el arduo proceso de diseño, armado y construccion del dispositivo, para la categoría Futuros Ingenieros de la WRO. Fue un proceso realizado con gran esfuerzo, independientemente de las dificultades. Un trabajo en equipo y dedicación para dar lo mejor de nosotros en la competencia, buscando la mejoria en cada area de la electronica, robotica y mecanica, ademas de basarnos en los conocimientos adquiridos en nuestro recorrido como estudiantes de Ingenieria en Eletronica, pensando siempre en adquirir un mayor conocimento y ser profesionales del mas alto nivel en nuestra area.
 
 
 
@@ -22,11 +21,12 @@ En este repositorio se observará un arduo proceso tanto de selección, así com
 
 -Adriana Carolina Palmar Molero
 
--Dharma Alexandra Peña Jiménez
+-Nilecto Noe Leon Guerere
 
-Somos jovenes estudiantes de ingeniería, donde nos conocimos en las aulas de la institucion como futuros ingenieros, al comienzo de la carrera y decidimos participar en la competencia por la pasión que compartimos de armar proyectos. La competencia nos llamo la atencion para poder expandir nuestros conocimientos de robótica, y explotar nuestras capacidades como un equipo de jovenes que buscan mirar más allá de sus fronteras. 
+Somos jovenes estudiantes de ingeniería en electronica, nos conocimos en las aulas de la institucion como futuros ingenierosa, en nuestro trayecto se nos presento la oportunidad de ingresar a la competencia y decidimos participar, motivados por la pasión que compartimos de armar proyectos electronicos. La competencia nos permitio  expandir nuestros conocimientos de robótica, y explotar nuestras capacidades como un equipo que busca superar las expectativas propuestas por la competencia. 
 
 ![WhatsApp Image 2025-06-07 at 17 47 40](https://github.com/user-attachments/assets/3568e8a1-b1b9-4abf-abde-68d06ec69484)
+<img width="1020" height="765" alt="image" src="https://github.com/user-attachments/assets/01b731f5-9993-463c-97b3-e0e8cc15bd60" />
 
 
 **Chasis de referencias de modelado 3D**
