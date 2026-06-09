@@ -25,8 +25,9 @@ En este repositorio esta planteado el arduo proceso de diseño, armado y constru
 
 Somos jovenes estudiantes de ingeniería en electronica, nos conocimos en las aulas de la institucion como futuros ingenierosa, en nuestro trayecto se nos presento la oportunidad de ingresar a la competencia y decidimos participar, motivados por la pasión que compartimos de armar proyectos electronicos. La competencia nos permitio  expandir nuestros conocimientos de robótica, y explotar nuestras capacidades como un equipo que busca superar las expectativas propuestas por la competencia. 
 
-![WhatsApp Image 2025-06-07 at 17 47 40](https://github.com/user-attachments/assets/3568e8a1-b1b9-4abf-abde-68d06ec69484)
-<img width="1020" height="765" alt="image" src="https://github.com/user-attachments/assets/01b731f5-9993-463c-97b3-e0e8cc15bd60" />
+<img width="628" height="557" alt="photo_2026-06-09_19-06-22" src="https://github.com/user-attachments/assets/b61ea05f-7386-4244-ab09-d77db72ba0d4" />
+
+
 
 
 **Chasis de referencias de modelado 3D**
