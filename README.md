@@ -1,172 +1,86 @@
-## 🚀 Documentacion de ingenieria - Cayapa
+# 🚀 WRO 2026 Future Engineers: Equipo Cayapa - Robot "Dinoco"
 
-Este repositorio contiene todos los materiales necesarios para crear a "Dinoco", el robot autónomo creado por el equipo "Cayapa", que participará en la categoría Futuros ingeniero en la Clasificaion de la World Robot Olympiad en la temporada 2026.
+<p align="center">
+  <img width="628" height="557" alt="Foto del Equipo Cayapa" src="https://github.com/user-attachments/assets/b61ea05f-7386-4244-ab09-d77db72ba0d4" />
+</p>
 
-##  Contenido 
+> *Vehículo autónomo desarrollado por el equipo **Cayapa** para competir en la categoría Future Engineers de la World Robot Olympiad (WRO) 2026. Diseñado para la navegación autónoma, seguimiento de carril y esquive de obstáculos mediante un microcontrolador ESP32 y una matriz de sensores.*
 
-- Miembros del equipo 
-- Introduccion 
-- Diseño adaptado 
-- Materiales y Componentes
+---
 
+## 📌 ÍNDICE
+1. [Introducción y Datos del Equipo](#1-introducción-y-datos-del-equipo)
+2. [Evolución e Iteraciones del Diseño Mecánico](#2-evolución-e-iteraciones-del-diseño-mecánico)
+3. [Movilidad y Sistema de Tracción/Dirección](#3-movilidad-y-sistema-de-traccióndirección)
+4. [Arquitectura de Hardware, Sensores y Energía](#4-arquitectura-de-hardware-sensores-y-energía)
+5. [Estrategia y Algoritmos para los Desafíos](#5-estrategia-y-algoritmos-para-los-desafíos)
+6. [Análisis de Fallas, Riesgos y Lecciones Aprendidas](#6-análisis-de-fallas-riesgos-y-lecciones-aprendidas)
+7. [Guía de Reproducibilidad y Archivos del Repositorio](#7-guía-de-reproducibilidad-y-archivos-del-repositorio)
 
-## 📖 Introducción
-En este repositorio esta planteado el arduo proceso de diseño, armado y construccion del dispositivo, para la categoría Futuros Ingenieros de la WRO. Fue un proceso realizado con gran esfuerzo, independientemente de las dificultades. Un trabajo en equipo y dedicación para dar lo mejor de nosotros en la competencia, buscando la mejoria en cada area de la electronica, robotica y mecanica, ademas de basarnos en los conocimientos adquiridos en nuestro recorrido como estudiantes de Ingenieria en Eletronica, pensando siempre en adquirir un mayor conocimento y ser profesionales del mas alto nivel en nuestra area.
+---
 
+<a name="1-introducción-y-datos-del-equipo"></a>
+## 👥 1. Introducción y Datos del Equipo
 
+Este repositorio documenta el desarrollo integral de nuestro vehículo autónomo **"Dinoco"**. Como estudiantes de Ingeniería en Electrónica, aplicamos principios de control automático, diseño mecánico e integración de sistemas electromecánicos para cumplir con la normativa oficial de la WRO 2026.
 
+### Miembros del Equipo
+* **Leontino Jose Medina Di Donato** - *Desarrollo de Software y Algoritmos de Control*
+* **Adriana Carolina Palmar Molero** - *Diseño de Circuitos, Sistema de Potencia y Cableado*
+* **Nilecto Noe Leon Guerere** - *Diseño Mecánico, Modelado e Impresión 3D*
 
-## Miembros del equipo 
--Leontino Jose Medina Di Donato
+---
 
--Adriana Carolina Palmar Molero
+<a name="2-evolución-e-iteraciones-del-diseño-mecánico"></a>
+## 🔄 2. Evolución e Iteraciones del Diseño Mecánico
 
--Nilecto Noe Leon Guerere
+El proceso de desarrollo de *Dinoco* siguió un enfoque iterativo basado en pruebas de campo para optimizar la distribución de peso, la rigidez estructural y la estabilidad de las lecturas de los sensores.
 
-Somos jovenes estudiantes de ingeniería en electronica, nos conocimos en las aulas de la institucion como futuros ingenierosa, en nuestro trayecto se nos presento la oportunidad de ingresar a la competencia y decidimos participar, motivados por la pasión que compartimos de armar proyectos electronicos. La competencia nos permitio  expandir nuestros conocimientos de robótica, y explotar nuestras capacidades como un equipo que busca superar las expectativas propuestas por la competencia. 
+### Etapa 1: Selección del Chasis Base
+Analizamos diferentes alternativas *Open Source* para el tren motriz y la dirección. Seleccionamos una estructura de chasis RC escala 1:10 por su adaptabilidad y factibilidad de fabricación mediante impresión 3D.
+* **Referencia del Chasis:** [Chasis RC 1:10 en Cults3D](https://cults3d.com/es/modelo-3d/juegos/casis-1-10-adaptable)
+* **Guía de referencia:** [Guía de Ensamblaje Chasis RC por DukeDoks](https://dukedoks.com/portfolio/guia-chasis-rc/)
 
-<img width="628" height="557" alt="photo_2026-06-09_19-06-22" src="https://github.com/user-attachments/assets/b61ea05f-7386-4244-ab09-d77db72ba0d4" />
+![Chasis Referencia](https://github.com/user-attachments/assets/9e7c69a4-fcab-4fcb-8af9-bcbd09175e0b)
 
+### Etapa 2: Iteraciones de Ensamblaje y Ajustes Estructurales
+Durante las primeras pruebas de rodaje identificamos vibraciones que afectaban la precisión de los sensores ultrasónicos. Modificamos los soportes impresos e independizamos mecánicamente la estructura superior del tren de tracción.
 
+| Vista Frontal | Vista Superior | Vista Lateral |
+| :---: | :---: | :---: |
+| [![Chasis 1](https://private-user-images.githubusercontent.com/147768482/452440916-3ea8a2ea-8c3c-4cf5-b728-1cdf928101bc.jpg)](link) | [![Chasis 2](https://private-user-images.githubusercontent.com/147768482/452440924-43a830bd-0473-43b1-a4c9-bbeb139ec016.jpg)](link) | [![Chasis 3](https://private-user-images.githubusercontent.com/147768482/452440921-7f2d57ec-28e8-406a-b306-d1da54f44467.jpg)](link) |
 
+---
 
-**Chasis de referencias de modelado 3D**
+<a name="3-movilidad-y-sistema-de-traccióndirección"></a>
+## ⚙️ 3. Movilidad y Sistema de Tracción/Dirección
 
-Al comienzo de nuestra inmersión para esta competencia, decidimos explotar al máximo todos los recursos disponibles a nuestra disposición, entre ellos los muchos modelos que hay en internet de modelado 3D para chasis, entre ellos encontramos uno que nos funcionaba en muchos factores, ya sea tiempo, factibilidad, estética, etc. Aquí dejamos el link a disposicion para mas información además de adjuntar la imagen de referencia y las imágenes de nuestro chasis post impresión 3D.
+### 3.1. Tracción Trasera: Motor Makeblock 9VDC (185 RPM)
+<img width="250" align="right" alt="Motor Makeblock" src="https://github.com/user-attachments/assets/8a9cdd8b-57d4-416b-b355-9b4c4810f2ba" />
 
+El movimiento longitudinal del robot es impulsado por un motor DC con caja reductora integrada.
+* **Justificación de Ingeniería:** Elegimos este motor debido a su **elevado par de apriete (torque)** y caja reductora metálica de 185 RPM. Esto permite superar la inercia del chasis completo y mantener una velocidad constante incluso en aceleraciones bruscas.
+* **Compensaciones (Trade-offs):** Su consumo de corriente e inductancia pueden generar ruido eléctrico. Para resolverlo, aislamos la etapa de potencia mediante el controlador L298N y aplicamos señales de modulación por ancho de pulso (PWM) para suavizar la aceleración.
 
+### 3.2. Sistema de Dirección: Servomotor MG90S
+<img width="220" align="right" alt="Servo MG90S" src="https://github.com/user-attachments/assets/8a5d8723-35ca-40f7-a34a-3fabfd5f0480" />
 
+Encargado del control angular en el tren delantero mediante una geometría de dirección tipo Ackermann.
+* **Justificación de Selección:** Optamos por el **MG90S** en lugar de servos estándar de plástico (como el SG90) porque cuenta con **engranajes metálicos (Metal Gear)**. Esto previene la rotura o deformación de los dientes mecánicos ante posibles colisiones accidentales contra las paredes de la pista.
+* **Control:** Se gobierna mediante salidas PWM directas, ofreciendo una respuesta angular rápida y precisa para las correcciones de trayectoria.
 
- https://cults3d.com/es/modelo-3d/juegos/casis-1-10-adaptable
+<div style="clear: both;"></div>
 
-![Chasis-RC-02](https://github.com/user-attachments/assets/9e7c69a4-fcab-4fcb-8af9-bcbd09175e0b)
+---
 
-### **Chasis Armado**
+<a name="4-arquitectura-de-hardware-sensores-y-energía"></a>
+## 🔌 4. Arquitectura de Hardware, Sensores y Energía
 
-[![](https://private-user-images.githubusercontent.com/147768482/452440916-3ea8a2ea-8c3c-4cf5-b728-1cdf928101bc.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDkyMzc3MTksIm5iZiI6MTc0OTIzNzQxOSwicGF0aCI6Ii8xNDc3Njg0ODIvNDUyNDQwOTE2LTNlYThhMmVhLThjM2MtNGNmNS1iNzI4LTFjZGY5MjgxMDFiYy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYwNlQxOTE2NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hYWU5ZjdkZWI2OTg3MGQ3ZDA1YWY3M2M0NGQxZTM2NGY3ZWYzNDdhMmQ3MDA0YmI4ZmI1MTAwMWQzM2Q5ZjIxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.gCb0gfFzAoQ2r3PP932QrQqkEkITuoaZtzW44D_CnMI)](http://https://private-user-images.githubusercontent.com/147768482/452440916-3ea8a2ea-8c3c-4cf5-b728-1cdf928101bc.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDkyMzc3MTksIm5iZiI6MTc0OTIzNzQxOSwicGF0aCI6Ii8xNDc3Njg0ODIvNDUyNDQwOTE2LTNlYThhMmVhLThjM2MtNGNmNS1iNzI4LTFjZGY5MjgxMDFiYy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYwNlQxOTE2NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hYWU5ZjdkZWI2OTg3MGQ3ZDA1YWY3M2M0NGQxZTM2NGY3ZWYzNDdhMmQ3MDA0YmI4ZmI1MTAwMWQzM2Q5ZjIxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.gCb0gfFzAoQ2r3PP932QrQqkEkITuoaZtzW44D_CnMI)
+### 4.1. Unidad Central de Procesamiento: ESP32
+<img width="280" align="right" alt="ESP32" src="https://github.com/user-attachments/assets/acf25497-c3d1-482c-a017-23cde340d36b" />
 
-[![chasis ](https://private-user-images.githubusercontent.com/147768482/452440924-43a830bd-0473-43b1-a4c9-bbeb139ec016.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDkyMzc3MTksIm5iZiI6MTc0OTIzNzQxOSwicGF0aCI6Ii8xNDc3Njg0ODIvNDUyNDQwOTI0LTQzYTgzMGJkLTA0NzMtNDNiMS1hNGM5LWJiZWIxMzllYzAxNi5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYwNlQxOTE2NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mM2NhOTJjMzNlZGQxNDQ5ZjY1MGFhNjA1OTYwYjRhYTI3MWU3YjhlZjEwYjZmYmU5NmEzZWU2ZWMzMjQwOWJiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.m79xnFxID8P_114g3x65EMjXeFpj_StbIAWnFPVMs9c "chasis ")](http://https://private-user-images.githubusercontent.com/147768482/452440924-43a830bd-0473-43b1-a4c9-bbeb139ec016.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDkyMzc3MTksIm5iZiI6MTc0OTIzNzQxOSwicGF0aCI6Ii8xNDc3Njg0ODIvNDUyNDQwOTI0LTQzYTgzMGJkLTA0NzMtNDNiMS1hNGM5LWJiZWIxMzllYzAxNi5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYwNlQxOTE2NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mM2NhOTJjMzNlZGQxNDQ5ZjY1MGFhNjA1OTYwYjRhYTI3MWU3YjhlZjEwYjZmYmU5NmEzZWU2ZWMzMjQwOWJiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.m79xnFxID8P_114g3x65EMjXeFpj_StbIAWnFPVMs9c "chasis ")
+**Justificación Tecnológica:** Seleccionamos el **ESP32** sobre arquitecturas tradicionales de 8 bits (como Arduino Uno). 
+* **Ventajas:** Procesador Tensilica Dual-Core a 240 MHz con 520 KB de SRAM. Esto nos otorga la capacidad de procesamiento requerida para ejecutar filtrado numérico en tiempo real de los sensores y control de trayectoria sin demoras en el bucle principal.
+* **Adaptación de Niveles Lógicos:** Dado que el ESP32 opera con lógica de 3.3V y los sensores ultrasónicos entregan señales de 5V, implementamos divisores de tensión / adaptadores de nivel lógico en los pines de recepción (RX/Echo) para proteger el microcontrolador.
 
-[![](https://private-user-images.githubusercontent.com/147768482/452440921-7f2d57ec-28e8-406a-b306-d1da54f44467.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDkyMzc3MTksIm5iZiI6MTc0OTIzNzQxOSwicGF0aCI6Ii8xNDc3Njg0ODIvNDUyNDQwOTIxLTdmMmQ1N2VjLTI4ZTgtNDA2YS1iMzA2LWQxZGE1NGY0NDQ2Ny5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYwNlQxOTE2NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hM2M0YTk4MGJjZmViNDZjZTU3NWU5NGQ2YjViNjQ0Y2ZjZDU5ODQ1NjcyYWIxNzc3YTE0ZDk1OGI4MDRjN2YyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.WmrkOCiTafj0QyTmyxjL1cyLML15lcGE_XQuN2gwS4o)](http://https://private-user-images.githubusercontent.com/147768482/452440921-7f2d57ec-28e8-406a-b306-d1da54f44467.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDkyMzc3MTksIm5iZiI6MTc0OTIzNzQxOSwicGF0aCI6Ii8xNDc3Njg0ODIvNDUyNDQwOTIxLTdmMmQ1N2VjLTI4ZTgtNDA2YS1iMzA2LWQxZGE1NGY0NDQ2Ny5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYwNlQxOTE2NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hM2M0YTk4MGJjZmViNDZjZTU3NWU5NGQ2YjViNjQ0Y2ZjZDU5ODQ1NjcyYWIxNzc3YTE0ZDk1OGI4MDRjN2YyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.WmrkOCiTafj0QyTmyxjL1cyLML15lcGE_XQuN2gwS4o)
-
-## **Guia de armado**
-En esta seccion se encontraran con un paso a paso de nuestro proceso  de armado, una guia sencilla y completa de nuestro proceso. Para empezar se adjunta un link del armado del chasis a disposición pública, el cual utilizamos como recurso para optimizar mejor el tiempo.
-
-
-https://dukedoks.com/portfolio/guia-chasis-rc/
-
-### **Archivos de impresion de chasis y fotos de la impresion**
-
-
-
-## 🔧 Materiales y Componentes
-Lista detallada de los componentes utilizados:
-- **Chasis de referencias modelado en 3D**
-- **Motor DC 9V kit ultimate 2.0**
-- **Servo Motor MG90S**
-- **ESP32**
-- **Batería de litio 18650 (3 UND)**
-- **Puente H L298N**
-- **Sensor De Ultrasonido Para Distancia HC-SR04 (3 UND)**
-
-
-
-**Servo motor MG90S**
-
-<img width="1200" height="1200" alt="image" src="https://github.com/user-attachments/assets/8a5d8723-35ca-40f7-a34a-3fabfd5f0480" />
-
-
-
-Descripción: Servo estándar de 180° usado en robótica y modelismo, con engranajes de nylon 214.
-
-Ventajas:
-
-1. Precisión: Control angular exacto mediante señales PWM 14.
-
-2. Costo bajo: Opción económica para proyectos básicos 10.
-
-3. Compatibilidad: Funciona con Arduino (ejemplo: control de brazos robóticos) 10.
-
-Desventajas:
-
- 1. Torque limitado: 3.2 kg/cm a 4.8V (insuficiente para cargas pesadas) 2.
-
-2. Fragilidad: Engranajes de nylon propensos a desgaste 14.
-
-3. Voltaje crítico: Requiere regulación precisa (recomendado 6V con UBEC)
-
-**ESP32**
-
-<img width="1000" height="529" alt="SBC-NodeMCU-ESP32-C_01" src="https://github.com/user-attachments/assets/acf25497-c3d1-482c-a017-23cde340d36b" />
-
-
-
-✅ 3 Ventajas del Arduino Uno
-Fácil de usar y aprender
-
-Ideal para principiantes gracias a su entorno de desarrollo intuitivo y abundante documentación.
-
-Gran comunidad y soporte
-
-Miles de tutoriales, foros y ejemplos disponibles para resolver dudas y compartir proyectos.
-
-Compatible con muchos módulos y sensores
-
-Puedes conectar fácilmente pantallas, motores, sensores, y más sin complicaciones.
-
-❌ 3 Desventajas del Arduino Uno
-Capacidad limitada de memoria y procesamiento
-
-Solo 32 KB de memoria flash y 2 KB de RAM, lo que restringe proyectos complejos.
-
-Sin conectividad inalámbrica integrada
-
-No incluye Wi-Fi ni Bluetooth, lo que requiere módulos adicionales para conectividad.
-
-Tamaño relativamente grande
-
-Puede ser incómodo para proyectos compactos o portátiles; hay placas más pequeñas como el Arduino Nano.
-
-
-**Baterías De Litio 18650 3.7V a 7800mA**
-
-[![](https://http2.mlstatic.com/D_NQ_NP_881915-MLV71037692218_082023-O.webp)](http://https://http2.mlstatic.com/D_NQ_NP_881915-MLV71037692218_082023-O.webp)
-
-**Puente H L298N**
-
-![Sin títulopuente h rojo](https://github.com/user-attachments/assets/c998e194-728f-4ca4-acd2-dbf268346189)
-
- **Sensor De Ultrasonido Para Distancia HC-SR04**
-
-![ultrasinico](https://github.com/user-attachments/assets/902c8c8b-0308-4dfd-9ffe-1c58e8a6bf10)
- 
-**Switches** 
-
-[![suiche](https://sumador.com/cdn/shop/products/Suichetipobalancinde2pines2.jpg?v=1588622314 "suiche")](http://https://sumador.com/cdn/shop/products/Suichetipobalancinde2pines2.jpg?v=1588622314 "suiche")
-
-**Motor Makeblock 9VDC de 185 RPM**
-
-![motor makeblock 9v](https://github.com/user-attachments/assets/8a9cdd8b-57d4-416b-b355-9b4c4810f2ba)
-
-### **Descripcion**
-
-El motor Makeblock 9VDC de 185 RPM es un motor comúnmente utilizado en la plataforma Makeblock o proyectos de robotica en general. Está impulsado por corriente continua y es la opción ideal para mover mecanismos giratorios en todo tipo de proyectos.
-
-### Ventajas:
-
-1. Alto torque: Ideales para cargas medias gracias a su caja reductora (ejemplo: 185 RPM para modelos de 9V) 
-
-2. Compatibilidad: Integrados con placas como MegaPi (basada en Arduino 
-
-3. Durabilidad: Piezas de aluminio anodizado en el kit Ultimate 2.0 9.
-
-#### Desventajas:
-
-1. Consumo energético: Requieren baterías de 9V (6xAA) o fuente externa 13.
-
-2. Control complejo: Necesitan drivers como el L298N para PWM 9.
-
-3. Ruido: Los engranajes pueden generar sonido en cargas altas 
-
-
-### Fin
+### 4.2. Mat
