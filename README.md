@@ -103,7 +103,7 @@ graph TD
 ### 4.1. Unidad de Procesamiento Central (Cerebro)
 
 #### ESP32 (Placa de Desarrollo 30 Pines)
-![ESP32](https://megatronica.cc/producto/shield-bornera-para-esp32-de-30-pines-adaptador-terminal-copia/)
+![ESP32](https://github.com/user-attachments/assets/acf25497-c3d1-482c-a017-23cde340d36b)
 
 * **Función y Ubicación:** Es el cerebro del robot, encargado de ejecutar el control PID y procesar los sensores. Va ubicado en la parte superior del chasis para evitar interferencias.
 * **Por qué se cambió:** Reemplaza al Arduino Mega del Prototipo 1.0 (lento y grande). El ESP32 nos da procesamiento Dual-Core a 240 MHz.
@@ -111,7 +111,8 @@ graph TD
 * **Desventajas:** Opera con lógica de 3.3V (a diferencia de los 5V del Arduino), lo que nos obligó a rediseñar la electrónica de sensores para evitar quemar sus pines.
 
 #### Shield Expansor para ESP32 (30 Pines)
-![Shield Expansor](https://via.placeholder.com/250x150.png?text=FOTO+PENDIENTE)
+![Shield Expansor](<img width="816" height="749" alt="Placa-de-extension-ESP32-30-pines_bornera-MEGATRONICA-Tienda-de-componentes-electronicos-Quito" src="https://github.com/user-attachments/assets/a9d74898-ad13-46c4-9a05-5e0a63846cde" />
+)
 
 * **Función y Ubicación:** Base donde se acopla el ESP32, expandiendo sus pines GPIO a borneras y conectores macho.
 * **Por qué se implementó:** En el carro anterior, las conexiones directas o en protoboard generaban falsos contactos con las vibraciones.
