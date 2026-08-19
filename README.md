@@ -9,8 +9,6 @@
 ## 📌 ÍNDICE
 1. Introducción y Datos del Equipo
 2. Evolución e Iteraciones del Diseño Mecánico
-   - 2.1 Prototipo 1.0 (Arduino Mega & Chasis RC)
-   - 2.2 Dinoco 2.0 (Diseño Compacto & ESP32)
 3. Movilidad y Sistema de Tracción/Dirección
 4. Arquitectura de Hardware, Sensores y Energía
 5. Dimensiones de la Pista y Estrategia de Control
@@ -53,9 +51,11 @@ Debido a las restricciones de tiempo en la fase inicial del proyecto, el equipo 
 
 Tras analizar las limitaciones mecánicas y eléctricas del Prototipo 1.0, rediseñamos la plataforma desde cero para crear **Dinoco 2.0**, enfocándonos en la ergonomía, la velocidad de procesamiento y la modularidad.
 
-| Vista del Chasis Actual | Ensamblaje de Componentes |
-| :---: | :---: |
-| ![Chasis 1](https://github.com/user-attachments/assets/e0d9c0b3-902e-4ee5-a17e-8eaeda4a3df8) | ![Chasis 2](https://github.com/user-attachments/assets/95f1f868-d955-4f10-abb5-973fc1276702) |
+**Vista del Chasis Actual:**
+![Chasis 1](https://github.com/user-attachments/assets/e0d9c0b3-902e-4ee5-a17e-8eaeda4a3df8)
+
+**Ensamblaje de Componentes:**
+![Chasis 2](https://github.com/user-attachments/assets/95f1f868-d955-4f10-abb5-973fc1276702)
 
 * **Reducción Ergonométrica:** La longitud pasó de 45 cm a un tamaño compacto entre **23 cm y 25 cm**, y el ancho se optimizó a **15 cm**. Esta disminución drástica del volumen mejora significativamente la maniobrabilidad del robot dentro de los carriles de la pista.
 * **Dirección Simplificada con Rodamientos:** Se rediseñó el tren delantero integrando **rodamientos (rolineras)** en las manguetas de dirección. Esto reduce drásticamente la fricción mecánica y elimina el juego holgado.
@@ -83,26 +83,9 @@ Tras analizar las limitaciones mecánicas y eléctricas del Prototipo 1.0, redis
 
 Para el diseño de **Dinoco 2.0**, realizamos una reestructuración completa de los componentes electrónicos y electromecánicos, basándonos en un análisis de compensaciones (*Trade-offs*).
 
-### Diagrama de Flujo de Energía y Datos
-
-```mermaid
-graph TD
-    Bat[Batería Li-Ion 11.1V] -->|Potencia Bruta 11.1V| L298N(Puente H L298N)
-    Bat -->|11.1V| Buck(Regulador Buck Step-Down)
-    
-    L298N -->|Control PWM| Motor[Motor DC Trasero]
-    
-    Buck -->|Alimentación 5V| ESP32{ESP32 + Shield Expansor}
-    Buck -.->|Alimentación 5V| Shifter(Convertidor de Nivel Lógico)
-    Buck -.->|Alimentación 5V| Sensores[Sensores Ultrasónicos HC-SR04]
-
-    ESP32 <-->|Señales I/O a 3.3V| Shifter
-    Shifter <-->|Señales Echo/Trig a 5V| Sensores
-```
-
 ### 4.1. Unidad de Procesamiento Central (Cerebro)
 
-#### ESP32 (Placa de Desarrollo 30 Pines)
+**ESP32 (Placa de Desarrollo 30 Pines)**
 ![ESP32](https://github.com/user-attachments/assets/acf25497-c3d1-482c-a017-23cde340d36b)
 
 * **Función y Ubicación:** Es el cerebro del robot, encargado de ejecutar el control PID y procesar los sensores. Va ubicado en la parte superior del chasis para evitar interferencias.
@@ -110,7 +93,7 @@ graph TD
 * **Ventajas:** Alta velocidad de reloj, conectividad inalámbrica para futura telemetría y tamaño sumamente compacto.
 * **Desventajas:** Opera con lógica de 3.3V (a diferencia de los 5V del Arduino), lo que nos obligó a rediseñar la electrónica de sensores para evitar quemar sus pines.
 
-#### Shield Expansor para ESP32 (30 Pines)
+**Shield Expansor para ESP32 (30 Pines)**
 ![Shield Expansor](https://via.placeholder.com/250x150.png?text=FOTO+PENDIENTE)
 
 * **Función y Ubicación:** Base donde se acopla el ESP32, expandiendo sus pines GPIO a borneras y conectores macho.
@@ -120,7 +103,7 @@ graph TD
 
 ### 4.2. Adaptación y Regulación de Energía
 
-#### Conversor de Nivel Lógico (Level Shifter Bidireccional)
+**Conversor de Nivel Lógico (Level Shifter Bidireccional)**
 ![Conversor de Nivel](https://via.placeholder.com/250x150.png?text=FOTO+PENDIENTE)
 
 * **Función y Ubicación:** Interfaz colocada entre los sensores ultrasónicos y el ESP32.
@@ -128,7 +111,7 @@ graph TD
 * **Ventajas:** Protege los pines GPIO del microcontrolador de sobretensiones irreversibles, traduciendo de 5V a 3.3V de forma segura.
 * **Desventajas:** Añade complejidad al cableado del esquemático y requiere ser alimentado con ambos voltajes simultáneamente.
 
-#### Regulador de Voltaje LM2596 (Buck Converter / Step-Down)
+**Regulador de Voltaje LM2596 (Buck Converter / Step-Down)**
 ![LM2596](https://via.placeholder.com/250x150.png?text=FOTO+PENDIENTE)
 
 * **Función y Ubicación:** Reduce el voltaje de las baterías (11.1V) a un bus estable y seguro de 5V para la lógica y sensores.
@@ -136,7 +119,7 @@ graph TD
 * **Ventajas:** Al ser un regulador conmutado, tiene una eficiencia de hasta 92%, no se sobrecalienta fácilmente y permite ajustar el voltaje.
 * **Desventajas:** Puede introducir un leve ruido de conmutación de alta frecuencia en la línea de alimentación.
 
-#### Baterías 18650 (x3) y Portabaterías (Holder)
+**Baterías 18650 (x3) y Portabaterías (Holder)**
 ![Baterías 18650](https://http2.mlstatic.com/D_NQ_NP_881915-MLV71037692218_082023-O.webp)
 
 * **Función y Ubicación:** Fuente de energía principal. Alojadas en la parte inferior trasera del chasis para mantener el centro de gravedad bajo.
@@ -146,7 +129,7 @@ graph TD
 
 ### 4.3. Actuadores y Mecánica de Tracción
 
-#### Motor DC Makeblock 9V (185 RPM) y Puente H L298N
+**Motor DC Makeblock 9V (185 RPM) y Puente H L298N**
 ![Motor y L298N](https://github.com/user-attachments/assets/c998e194-728f-4ca4-acd2-dbf268346189)
 
 * **Función y Ubicación:** El motor provee la tracción en el eje trasero sólido. El driver L298N controla su sentido de giro y velocidad mediante PWM.
@@ -154,7 +137,7 @@ graph TD
 * **Ventajas:** La caja reductora ofrece excelente torque. El driver L298N es robusto, tiene disipador térmico y aísla el ruido del motor.
 * **Desventajas:** El eje rígido obliga a un ligero arrastre de las ruedas traseras en curvas cerradas.
 
-#### Servomotor MG90S
+**Servomotor MG90S**
 ![Servo MG90S](https://github.com/user-attachments/assets/8a5d8723-35ca-40f7-a34a-3fabfd5f0480)
 
 * **Función y Ubicación:** Controla la geometría de dirección Ackermann en el tren delantero.
@@ -162,7 +145,7 @@ graph TD
 * **Ventajas:** Formato miniatura que ahorra espacio, pero con **engranajes metálicos (Metal Gear)** que garantizan durabilidad frente a golpes.
 * **Desventajas:** Menor torque bruto en comparación con el MG995, pero se compensó aliviando la mecánica de la dirección.
 
-#### Rodamientos (Rolineras) 608 y 687ZZ
+**Rodamientos (Rolineras) 608 y 687ZZ**
 ![Rodamientos](https://via.placeholder.com/250x150.png?text=FOTO+PENDIENTE)
 
 * **Función y Ubicación:** Instalados en los ejes y articulaciones (manguetas) del sistema de dirección impreso en 3D.
@@ -172,7 +155,7 @@ graph TD
 
 ### 4.4. Sensores de Entorno
 
-#### Matriz de Sensores Ultrasónicos HC-SR04 (x3)
+**Matriz de Sensores Ultrasónicos HC-SR04 (x3)**
 ![Sensor HC-SR04](https://github.com/user-attachments/assets/902c8c8b-0308-4dfd-9ffe-1c58e8a6bf10)
 
 * **Función y Ubicación:** Sistema de detección primario. Uno frontal para detectar esquinas/muros finales y dos laterales para el control PID de seguimiento de carril.
@@ -193,7 +176,7 @@ El diseño de *Dinoco 2.0* se adaptó estrictamente a las especificaciones del c
 Heredamos y refinamos el algoritmo de **Control Proporcional-Integrativo-Derivativo (PID)** del software anterior:
 
 1. **Lectura y Filtrado:** El ESP32 consulta cíclicamente los sensores ultrasónicos, aplicando un filtro por media móvil para eliminar picos erróneos.
-2. **Cálculo de Error de Centrado:** Se determina la diferencia de distancia entre la pared izquierda y derecha: `Error = Distancia Izquierda - Distancia Derecha`.
+2. **Cálculo de Error de Centrado:** Se determina la diferencia de distancia entre la pared izquierda y derecha: Error = Distancia Izquierda - Distancia Derecha.
 3. **Corrección Angular:** La salida del PID ajusta en tiempo real la señal PWM hacia el servomotor de dirección.
 
 ---
@@ -218,7 +201,7 @@ Heredamos y refinamos el algoritmo de **Control Proporcional-Integrativo-Derivat
 
 El repositorio está estructurado para asegurar la total reproducibilidad del robot:
 
-    ├── src/            # Código fuente (.ino) optimizado para ESP32
-    ├── models/         # Piezas STL para la dirección Ackermann y soportes 3D
-    ├── schematics/     # Diagrama de conexiones
-    └── docs/           # Reglamento WRO 2026 y datasheets
+* `/src` : Código fuente (.ino) optimizado para ESP32
+* `/models` : Piezas STL para la dirección Ackermann y soportes 3D
+* `/schematics` : Diagrama de conexiones
+* `/docs` : Reglamento WRO 2026 y datasheets
