@@ -85,7 +85,7 @@ Para el diseño de **Dinoco 2.0**, realizamos una reestructuración completa de 
 
 ### Diagrama de Flujo de Energía y Datos
 
-~~~mermaid
+```mermaid
 graph TD
     Bat[Batería Li-Ion 11.1V] -->|Potencia Bruta 11.1V| L298N(Puente H L298N)
     Bat -->|11.1V| Buck(Regulador Buck Step-Down)
@@ -98,7 +98,7 @@ graph TD
 
     ESP32 <-->|Señales I/O a 3.3V| Shifter
     Shifter <-->|Señales Echo/Trig a 5V| Sensores
-~~~
+```
 
 ### 4.1. Unidad de Procesamiento Central (Cerebro)
 
@@ -111,12 +111,11 @@ graph TD
 * **Desventajas:** Opera con lógica de 3.3V (a diferencia de los 5V del Arduino), lo que nos obligó a rediseñar la electrónica de sensores para evitar quemar sus pines.
 
 #### Shield Expansor para ESP32 (30 Pines)
-![Shield Expansor](<img width="816" height="749" alt="Placa-de-extension-ESP32-30-pines_bornera-MEGATRONICA-Tienda-de-componentes-electronicos-Quito" src="https://github.com/user-attachments/assets/a9d74898-ad13-46c4-9a05-5e0a63846cde" />
-)
+![Shield Expansor](https://via.placeholder.com/250x150.png?text=FOTO+PENDIENTE)
 
 * **Función y Ubicación:** Base donde se acopla el ESP32, expandiendo sus pines GPIO a borneras y conectores macho.
 * **Por qué se implementó:** En el carro anterior, las conexiones directas o en protoboard generaban falsos contactos con las vibraciones.
-* **Ventajas:** Facilita el cableado con terminales Dupont, organiza la distribución de energía y permite sustituir el ESP32 en segundos en caso de falla en pits.
+* **Ventajas:** Facilita el cableado con terminales Dupont, organiza la distribución de energía y permite sustituir el ESP32 en segundos en caso de falla en los pits.
 * **Desventajas:** Aumenta ligeramente la altura de la electrónica principal.
 
 ### 4.2. Adaptación y Regulación de Energía
