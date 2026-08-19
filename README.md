@@ -103,7 +103,7 @@ graph TD
 ### 4.1. Unidad de Procesamiento Central (Cerebro)
 
 #### ESP32 (Placa de Desarrollo 30 Pines)
-![ESP32](https://github.com/user-attachments/assets/acf25497-c3d1-482c-a017-23cde340d36b)
+![ESP32](https://megatronica.cc/producto/shield-bornera-para-esp32-de-30-pines-adaptador-terminal-copia/)
 
 * **Función y Ubicación:** Es el cerebro del robot, encargado de ejecutar el control PID y procesar los sensores. Va ubicado en la parte superior del chasis para evitar interferencias.
 * **Por qué se cambió:** Reemplaza al Arduino Mega del Prototipo 1.0 (lento y grande). El ESP32 nos da procesamiento Dual-Core a 240 MHz.
