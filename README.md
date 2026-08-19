@@ -86,6 +86,7 @@ Para el diseño de **Dinoco 2.0**, realizamos una reestructuración completa de 
 ### 4.1. Unidad de Procesamiento Central (Cerebro)
 
 **ESP32 (Placa de Desarrollo 30 Pines)**
+
 ![ESP32](https://github.com/user-attachments/assets/acf25497-c3d1-482c-a017-23cde340d36b)
 
 * **Función y Ubicación:** Es el cerebro del robot, encargado de ejecutar el control PID y procesar los sensores. Va ubicado en la parte superior del chasis para evitar interferencias.
@@ -94,7 +95,8 @@ Para el diseño de **Dinoco 2.0**, realizamos una reestructuración completa de 
 * **Desventajas:** Opera con lógica de 3.3V (a diferencia de los 5V del Arduino), lo que nos obligó a rediseñar la electrónica de sensores para evitar quemar sus pines.
 
 **Shield Expansor para ESP32 (30 Pines)**
-![Shield Expansor](https://via.placeholder.com/250x150.png?text=FOTO+PENDIENTE)
+
+![enter image description here](https://megatronica.cc/wp-content/uploads/2025/03/Placa-de-extension-ESP32-30-pines_bornera-MEGATRONICA-Tienda-de-componentes-electronicos-Quito.webp)
 
 * **Función y Ubicación:** Base donde se acopla el ESP32, expandiendo sus pines GPIO a borneras y conectores macho.
 * **Por qué se implementó:** En el carro anterior, las conexiones directas o en protoboard generaban falsos contactos con las vibraciones.
@@ -104,7 +106,8 @@ Para el diseño de **Dinoco 2.0**, realizamos una reestructuración completa de 
 ### 4.2. Adaptación y Regulación de Energía
 
 **Conversor de Nivel Lógico (Level Shifter Bidireccional)**
-![Conversor de Nivel](https://via.placeholder.com/250x150.png?text=FOTO+PENDIENTE)
+
+![enter image description here](https://digizone.com.ve/wp-content/uploads/2021/07/conversor-de-nivel-logico-i2c.jpg)
 
 * **Función y Ubicación:** Interfaz colocada entre los sensores ultrasónicos y el ESP32.
 * **Por qué se implementó:** El ESP32 solo soporta 3.3V en sus entradas, pero el pin Echo de los sensores ultrasónicos envía pulsos de 5V. 
@@ -112,7 +115,8 @@ Para el diseño de **Dinoco 2.0**, realizamos una reestructuración completa de 
 * **Desventajas:** Añade complejidad al cableado del esquemático y requiere ser alimentado con ambos voltajes simultáneamente.
 
 **Regulador de Voltaje LM2596 (Buck Converter / Step-Down)**
-![LM2596](https://via.placeholder.com/250x150.png?text=FOTO+PENDIENTE)
+
+![enter image description here](https://sumador.com/cdn/shop/products/Lm2596_Electronilab_1_2048x2048.jpg?v=1549320563)
 
 * **Función y Ubicación:** Reduce el voltaje de las baterías (11.1V) a un bus estable y seguro de 5V para la lógica y sensores.
 * **Por qué se cambió:** Reemplaza al regulador lineal LM7805 del Prototipo 1.0 que se sobrecalentaba y apagaba el robot.
@@ -146,8 +150,10 @@ Para el diseño de **Dinoco 2.0**, realizamos una reestructuración completa de 
 * **Desventajas:** Menor torque bruto en comparación con el MG995, pero se compensó aliviando la mecánica de la dirección.
 
 **Rodamientos (Rolineras) 608 y 687ZZ**
-![Rodamientos](https://via.placeholder.com/250x150.png?text=FOTO+PENDIENTE)
 
+![enter image description here](https://http2.mlstatic.com/D_NQ_NP_947416-MLV106902264108_022026-O.webp)
+
+![enter image description here](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfsXJGs0ADARVllLnBRAYkDqMZGpto9uicrkkIOkDcXw&s=10)
 * **Función y Ubicación:** Instalados en los ejes y articulaciones (manguetas) del sistema de dirección impreso en 3D.
 * **Por qué se implementaron:** El Prototipo 1.0 usaba fricción directa plástico con plástico, lo que hacía que el giro fuera tosco.
 * **Ventajas:** Reducen la fricción a casi cero, mejoran drásticamente la suavidad del giro y alargan la vida útil del MG90S.
