@@ -189,19 +189,4 @@ Heredamos y refinamos el algoritmo de **Control Proporcional-Integrativo-Derivat
 
 > 🔊 **Problema: Lecturas erráticas en los sensores ultrasónicos**
 > * **Causa:** El ruido acústico del aire y la vibración estructural generaban picos de lectura falsos.
-> * **Solución:** Diseñamos una función de software que toma muestras consecutivas, descarta los valores extremos y calcula un promedio.
-
-> ⚠️ **Desajuste de Niveles de Voltaje (3.3V vs 5V):**
-> * **Riesgo:** Conectar las salidas Echo de los sensores (5V) directamente al ESP32 (3.3V) dañaría los puertos GPIO.
-> * **Solución:** Implementación obligatoria del módulo convertidor de nivel lógico.
-
----
-
-## 🛠️ 7. Guía de Reproducibilidad y Archivos del Repositorio
-
-El repositorio está estructurado para asegurar la total reproducibilidad del robot:
-
-* `/src` : Código fuente (.ino) optimizado para ESP32
-* `/models` : Piezas STL para la dirección Ackermann y soportes 3D
-* `/schematics` : Diagrama de conexiones
-* `/docs` : Reglamento WRO 2026 y datasheets
+> * **Solución:** Diseñamos una función de software que toma muestras consecutivas, descarta los valores extremos y calcula
