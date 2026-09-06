@@ -52,6 +52,7 @@ Radio de Giro Ineficiente: Con dimensiones cercanas al límite máximo, el vehí
 Ruido Inductivo (Back-EMF): El servomotor MG995 inyectaba picos de corriente hacia el pin de señal del Arduino Mega, provocando bloqueos aleatorios del programa.
 
 Sobrecarga Térmica y Caídas de Tensión (Brownouts): El regulador LM7805 sufría sobrecalentamiento por la demanda simultánea de los sensores y el servo, ocasionando lecturas erráticas y reinicios constantes.
+
 ---
 
 ### 2.2. Dinoco (Versión 2.0 / Actual): Optimización Dimensional y Upgrade Electrónico
