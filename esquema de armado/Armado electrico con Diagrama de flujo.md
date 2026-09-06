@@ -6,64 +6,7 @@
 
 ## Diagrama de Flujo del CircuitoEste documento presenta un diagrama de flujo que ilustra la lógica operativa de un circuito, basado en la imagen de referencia proporcionada.
 
-graph TD
-    %% Inicialización y Switches
-    Inicio([Conexión de 3 Baterías]) --> SW1{¿Switch 1 Cerrado?}
-    SW1 -- Sí --> P1[Energiza Puente H L298N]
-    SW1 -- Sí --> P2[Energiza Convertidor Regulador]
-    
-    P2 --> SW2{¿Switch 2 Cerrado?}
-    SW2 -- Sí --> P3[Energiza ESP32]
-    SW2 -- Sí --> P4[Energiza Servomotor]
-    SW2 -- Sí --> P5[Energiza Convertidor de Nivel Lógico]
-    
-    P5 --> P6[Alimenta Sensores Ultrasónicos 3.3V]
-    
-    P3 --> S1[ESP32: Configura Pines]
-    P4 --> S1
-    P6 --> S1
-    
-    S1 --> S2[Servo al centro 95° y Motor detenido]
-    S2 --> S3[Pausa de 1.5s Toma de Fotografía]
-    S3 --> S4[Lectura lateral inicial: Establece errorInicial]
-    S4 --> S5[Arranca Motor DC a velocidadCrucero]
-    
-    %% Bucle Principal
-    S5 --> Bucle((Inicio del Loop))
-    Bucle --> L1[Lectura promediada de 3 Sensores]
-    L1 --> Estado{¿Estado Actual?}
-    
-    %% ESTADO: NAV_RECTA
-    Estado -- NAV_RECTA --> N1{¿Hueco lateral > 80cm <br>o Frente < 35cm?}
-    N1 -- Sí --> N2[Define sentido y cambia a GIRO_ESQUINA]
-    N1 -- No --> N3{¿Dist. lateral < 25cm?}
-    
-    N3 -- Sí --> N4[ESCUDO LATERAL: Giro brusco evasivo]
-    N3 -- No --> N5[PID: Microajuste de dirección servo]
-    
-    N4 --> Bucle
-    N5 --> Bucle
-    N2 --> Bucle
-    
-    %% ESTADO: GIRO_ESQUINA
-    Estado -- GIRO_ESQUINA --> G1[Servo al ángulo máximo]
-    G1 --> G2[Motor baja a velocidadGiro]
-    G2 --> G3{¿Frente despejado y <br> pared lateral detectada?}
-    G3 -- No --> Bucle
-    G3 -- Sí --> G4[Cambia a SALIDA_CURVA]
-    G4 --> Bucle
-    
-    %% ESTADO: SALIDA_CURVA
-    Estado -- SALIDA_CURVA --> C1[Motor sube a velocidadCrucero]
-    C1 --> C2{¿Tiempo transcurrido?}
-    
-    C2 -- 0 a 150ms --> C3[FASE 1: Latigazo contra-volante]
-    C2 -- 150 a 300ms --> C4[FASE 2: Estabiliza servo al centro 95°]
-    C2 -- Más de 300ms --> C5[FASE 3: Limpia PID y cambia a NAV_RECTA]
-    
-    C3 --> Bucle
-    C4 --> Bucle
-    C5 --> Bucle.md
+
 
 
 **Explicación Detallada del Diagrama de Flujo**:El diagrama de flujo desglosa los pasos inferidos del funcionamiento del circuito:Inicio:Representa el punto de partida para la secuencia de operaciones del circuito.
