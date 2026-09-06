@@ -1,23 +1,33 @@
-#include <Servo.h>
+#include <ESP32Servo.h>
 
-Servo miServo;       // Crea un objeto servo
-int pinServo = 9;    // Pin de conexión del servo
-int angulo = 0;      // Variable para almacenar el ángulo
+Servo direccionServo;  
+const int servoPin = 26; // Tu pin seguro confirmado
 
 void setup() {
-  miServo.attach(pinServo);  // Conecta el servo al pin
+  Serial.begin(115200);
+
+  // Configuración de temporizadores para ESP32
+  ESP32PWM::allocateTimer(0);
+  ESP32PWM::allocateTimer(1);
+  ESP32PWM::allocateTimer(2);
+  ESP32PWM::allocateTimer(3);
+  direccionServo.setPeriodHertz(50); 
+  
+  // Conexión del servo
+  direccionServo.attach(servoPin, 500, 2400); 
+
+  Serial.println("==========================================");
+  Serial.println("MODO DE CALIBRACIÓN MECÁNICA ACTIVADO");
+  Serial.println("Servo bloqueado rígidamente a 90 grados.");
+  Serial.println("Ya puedes ajustar físicamente el chasis.");
+  Serial.println("==========================================");
+  
+  // Posicionar en el centro absoluto
+  direccionServo.write(90);
 }
 
 void loop() {
-  // Mueve el servo de 0° a 180° en pasos de 1°
-  for(angulo = 0; angulo <= 180; angulo++) {  
-    miServo.write(angulo);    // Envía el ángulo al servo
-    delay(15);                // Tiempo para llegar a la posición
-  }
-  
-  // Mueve el servo de 180° a 0° en pasos de 1°
-  for(angulo = 180; angulo >= 0; angulo--) {  
-    miServo.write(angulo);
-    delay(15);
-  }
+  // Refrescar constantemente la posición para que el servo mantenga el torque
+  direccionServo.write(90);
+  delay(500); 
 }
