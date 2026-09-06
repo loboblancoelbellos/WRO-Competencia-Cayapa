@@ -1,124 +1,101 @@
- ###Code Blocks (multi-language) & highlighting
+#include <ESP32Servo.h>
 
-####Inline code
+// ==========================================
+// PINES DE HARDWARE (Basado en tu diagrama)
+// ==========================================
+const int trigPinIzq = 15; const int echoPinIzq = 2; 
+const int trigPinCen = 27; const int echoPinCen = 14; 
+const int trigPinDer = 13; const int echoPinDer = 12; 
 
-#include <Servo.h>
+const int enaPin = 25; const int in1Pin = 33; const int in2Pin = 32; 
+const int servoPin = 26; 
 
-#define SW_ARRANQUE 2 #define INH 4
-#define IN1 5
-#define IN2 6
-#define PIN_SERVO 8
-#define LED_ARRANQUE 12 #define TRIG_FRONTAL 22 #define ECHO_FRONTAL 23 #define TRIG_DERECHO 24 #define ECHO_DERECHO 25 #define TRIG_IZQUIERDO 26 #define ECHO_IZQUIERDO 27
-
-#define POS_CENTRO 71 // Ángulo para ruedas rectas #define ANGULO_GIRO 25 // Ángulo de giro máximo (ajustable)
-
-#define DISTANCIA_SEGURA 30
-#define DISTANCIA_PARED 15
-
-Servo miServo;
-
-int velocidadMotor = 25;
-
-bool detenerCompletamente = false;
-
-float frontal; float derecha; float izquierda;
+Servo direccionServo;
 
 void setup() {
+  Serial.begin(115200);
+  Serial.println("\n--- INICIANDO TEST GENERAL DE HARDWARE ---");
 
-// ----- MOTOR ----- // pinMode(INH, OUTPUT); digitalWrite(INH, HIGH);
+  // Configurar Pines
+  pinMode(trigPinIzq, OUTPUT); pinMode(echoPinIzq, INPUT);
+  pinMode(trigPinCen, OUTPUT); pinMode(echoPinCen, INPUT);
+  pinMode(trigPinDer, OUTPUT); pinMode(echoPinDer, INPUT);
+  pinMode(enaPin, OUTPUT); pinMode(in1Pin, OUTPUT); pinMode(in2Pin, OUTPUT);
+  detenerMotores();
 
-pinMode(IN1, OUTPUT); pinMode(IN2, OUTPUT);
+  // Inicializar Servo
+  ESP32PWM::allocateTimer(0);
+  direccionServo.setPeriodHertz(50); 
+  direccionServo.attach(servoPin, 500, 2400);
+  delay(2000); // Dar tiempo a que enciendas la batería
 
-pinMode(TRIG_FRONTAL, OUTPUT); pinMode(ECHO_FRONTAL, INPUT); pinMode(TRIG_DERECHO, OUTPUT); pinMode(ECHO_DERECHO, INPUT); pinMode(TRIG_IZQUIERDO, OUTPUT); pinMode(ECHO_IZQUIERDO, INPUT);
+  // ----------------------------------------------------
+  // PRUEBA 1: DIRECCIÓN (SERVO)
+  // ----------------------------------------------------
+  Serial.println("PRUEBA 1: Servo a la DERECHA...");
+  direccionServo.write(55);
+  delay(1000);
+  Serial.println("PRUEBA 1: Servo a la IZQUIERDA...");
+  direccionServo.write(145);
+  delay(1000);
+  Serial.println("PRUEBA 1: Servo al CENTRO...");
+  direccionServo.write(95);
+  delay(1500);
 
-// ----- SWITCHES ----- // pinMode(SW_ARRANQUE, INPUT_PULLUP);
+  // ----------------------------------------------------
+  // PRUEBA 2: TRACCIÓN (MOTOR DC)
+  // ----------------------------------------------------
+  Serial.println("PRUEBA 2: Motor hacia ADELANTE...");
+  digitalWrite(in1Pin, HIGH); digitalWrite(in2Pin, LOW);
+  analogWrite(enaPin, 150);
+  delay(1500);
+  
+  detenerMotores();
+  delay(500);
 
-pinMode(LED_ARRANQUE, OUTPUT); digitalWrite(LED_ARRANQUE, LOW);
+  Serial.println("PRUEBA 2: Motor hacia ATRAS...");
+  digitalWrite(in1Pin, LOW); digitalWrite(in2Pin, HIGH);
+  analogWrite(enaPin, 150);
+  delay(1500);
 
-miServo.attach(PIN_SERVO); miServo.write(POS_CENTRO); delay(800);
+  detenerMotores();
+  Serial.println("PRUEBA 2: Fin de prueba de motores.");
+  delay(1000);
 
-centrarRuedas(); Serial.begin(9600);
-
+  Serial.println("\nPRUEBA 3: LECTURA DE SENSORES ULTRASÓNICOS");
+  Serial.println("Pasa la mano frente a los sensores. Presiona el botón de reinicio (EN) en el ESP32 para repetir todo.");
+  Serial.println("--------------------------------------------------");
 }
 
 void loop() {
+  // ----------------------------------------------------
+  // PRUEBA 3: CICLO INFINITO LEYENDO SENSORES
+  // ----------------------------------------------------
+  int distIzq = leerDistancia(trigPinIzq, echoPinIzq);
+  int distCen = leerDistancia(trigPinCen, echoPinCen);
+  int distDer = leerDistancia(trigPinDer, echoPinDer);
 
-if (digitalRead(SW_ARRANQUE) == LOW && !detenerCompletamente) {
-    digitalWrite(LED_ARRANQUE, HIGH);
-    
-    // Leer sensores primero
-    frontal = leerUltrasonico(TRIG_FRONTAL, ECHO_FRONTAL);
-    derecha = leerUltrasonico(TRIG_DERECHO, ECHO_DERECHO);
-    izquierda = leerUltrasonico(TRIG_IZQUIERDO, ECHO_IZQUIERDO);
+  Serial.print("IZQ: "); Serial.print(distIzq); Serial.print(" cm \t|\t");
+  Serial.print("CEN: "); Serial.print(distCen); Serial.print(" cm \t|\t");
+  Serial.print("DER: "); Serial.print(distDer); Serial.println(" cm");
 
-    Serial.print("Frontal: "); Serial.print(frontal);
-    Serial.print(" Derecha: "); Serial.print(derecha);
-    Serial.print(" Izquierda: "); Serial.println(izquierda);
-
-    // Tomar decisiones basadas en lecturas
-    if (frontal < DISTANCIA_SEGURA) {
-        evitarObstaculo(derecha, izquierda);
-    } 
-    else if (derecha < DISTANCIA_PARED) {
-        ajustarIzquierda(); 
-    } 
-    else if (izquierda < DISTANCIA_PARED) {
-        ajustarDerecha();
-    } 
-    else {
-        moverAdelante();
-        centrarRuedas();
-    }
-}
-else {
-    digitalWrite(LED_ARRANQUE, LOW);
-    detenerMotor();
-}
-delay(250);
+  delay(300); // Esperar un poco para no inundar el monitor
 }
 
-void evitarObstaculo(float distDerecha, float distIzquierda) { detenerMotor(); delay(250);
-
- if (distDerecha > distIzquierda) {
-    girarDerecha();
-} else {
-    girarIzquierda();
+// Función auxiliar para leer los sensores sin bloquear el código
+int leerDistancia(int trig, int echo) {
+  digitalWrite(trig, LOW); delayMicroseconds(2);
+  digitalWrite(trig, HIGH); delayMicroseconds(10);
+  digitalWrite(trig, LOW);
+  
+  // Timeout de 18000 microsegundos (~300 cm máximo) para evitar que el ESP32 se cuelgue si un cable se desconecta
+  long duracion = pulseIn(echo, HIGH, 18000); 
+  
+  if (duracion == 0) return 300; // Si no hay eco, devuelve 300cm
+  return duracion * 0.034 / 2;
 }
 
-unsigned long tiempoInicio = millis();
-while (millis() - tiempoInicio < 1000) {
-    ejecutarComportamientoNormal();
-    delay(250);
-    }
-}
-
-void ajustarDerecha() { miServo.write(POS_CENTRO - ANGULO_GIRO/2); moverAdelante(); }
-
-void ajustarIzquierda() { miServo.write(POS_CENTRO + ANGULO_GIRO/2); moverAdelante(); }
-
-float leerUltrasonico(uint8_t trigPin, uint8_t echoPin) { digitalWrite(trigPin, LOW); delayMicroseconds(100); digitalWrite(trigPin, HIGH); delayMicroseconds(50); digitalWrite(trigPin, LOW); return pulseIn(echoPin, HIGH) * 0.034 / 2; }
-
-void centrarRuedas() { miServo.write(POS_CENTRO); delay(120); }
-
-void girarDerecha() { miServo.write(POS_CENTRO + ANGULO_GIRO); delay(80); }
-
-void girarIzquierda() { miServo.write(POS_CENTRO - ANGULO_GIRO); delay(80); } void detenerMotor() { digitalWrite(IN1, LOW); digitalWrite(IN2, LOW); }
-
-void moverAdelante() { digitalWrite(IN1, HIGH); digitalWrite(IN2, LOW); if(frontal > 0) { int velocidadAjustada = map(constrain((int)frontal, 3, 10), 3, 5, 7, 10); analogWrite(IN1, velocidadAjustada); } else { analogWrite(IN1, velocidadMotor); } }
-
-void ejecutarComportamientoNormal() { frontal = leerUltrasonico(TRIG_FRONTAL, ECHO_FRONTAL); derecha = leerUltrasonico(TRIG_DERECHO, ECHO_DERECHO); izquierda = leerUltrasonico(TRIG_IZQUIERDO, ECHO_IZQUIERDO);
-
-if (frontal < DISTANCIA_SEGURA) {
-    evitarObstaculo(derecha, izquierda);
-}   
-else if (derecha < DISTANCIA_PARED) {
-    ajustarIzquierda(); 
-} 
-else if (izquierda < DISTANCIA_PARED) {
-    ajustarDerecha();
-} 
-else {
-    moverAdelante();
-    centrarRuedas();
-}
+void detenerMotores() {
+  digitalWrite(in1Pin, LOW); digitalWrite(in2Pin, LOW);
+  analogWrite(enaPin, 0);
 }
