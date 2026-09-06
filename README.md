@@ -65,7 +65,12 @@ Tras analizar las limitaciones mecánicas y eléctricas del Prototipo 1.0, redis
 
 
 **Ensamblaje de Componentes:**
-![Chasis 2](https://github.com/user-attachments/assets/95f1f868-d955-4f10-abb5-973fc1276702)
+
+<img width="700" height="900" alt="adriana ensamblando 2026-09-06 at 17 45 37" src="https://github.com/user-attachments/assets/1cf71c6b-20a4-48c0-9acb-80939633c7cf" />
+
+<img width="958" height="1280" alt="leontino ensamblando 2026-09-06 at 17 44 20" src="https://github.com/user-attachments/assets/960e2898-cf7f-4d44-b53a-16cfc8f6e16f" />
+
+
 
 * **Reducción Ergonométrica:** La longitud pasó de 45 cm a un tamaño compacto entre **23 cm y 25 cm**, y el ancho se optimizó a **15 cm**. Esta disminución drástica del volumen mejora significativamente la maniobrabilidad del robot dentro de los carriles de la pista.
 * **Dirección Simplificada con Rodamientos:** Se rediseñó el tren delantero integrando **rodamientos (rolineras)** en las manguetas de dirección. Esto reduce drásticamente la fricción mecánica y elimina el juego holgado.
