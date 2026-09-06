@@ -1,5 +1,5 @@
-const int trigPin = 9;
-const int echoPin = 10;
+const int trigPin = 15;
+const int echoPin = 2;
 
 void setup() {
   Serial.begin(9600);
