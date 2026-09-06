@@ -1,6 +1,6 @@
 # 🚀 WRO 2026 Future Engineers: Equipo Cayapa - Robot "Dinoco"
 
-<img width="700" height="1080" alt="equipo cayapa2026-09-06 at 17 40 40" src="https://github.com/user-attachments/assets/5f3ed0f4-17f1-4fa6-af08-a1def53fc793" />
+<img width="800" height="1080" alt="equipo cayapa2026-09-06 at 17 40 40" src="https://github.com/user-attachments/assets/5f3ed0f4-17f1-4fa6-af08-a1def53fc793" />
 
 > *Vehículo autónomo de diseño compacto desarrollado por el equipo **Cayapa** para competir en la categoría Future Engineers de la World Robot Olympiad (WRO) 2026. Diseñado para optimizar el radio de giro, la estabilidad estructural y la velocidad de procesamiento mediante un microcontrolador ESP32 y una matriz de sensores ultrasónicos.*
 
