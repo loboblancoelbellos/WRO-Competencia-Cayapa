@@ -53,7 +53,9 @@ Debido a las restricciones de tiempo en la fase inicial del proyecto, el equipo 
 Tras analizar las limitaciones mecánicas y eléctricas del Prototipo 1.0, rediseñamos la plataforma desde cero para crear **Dinoco 2.0**, enfocándonos en la ergonomía, la velocidad de procesamiento y la modularidad.
 
 **Vista del Chasis Actual:**
-![Chasis 1](https://github.com/user-attachments/assets/e0d9c0b3-902e-4ee5-a17e-8eaeda4a3df8)
+
+<img width="1280" height="720" alt="carrito 2026-09-06 at 17 45 28" src="https://github.com/user-attachments/assets/17bf026b-2edc-4e55-b8d5-af26b3677a9d" />
+
 
 **Ensamblaje de Componentes:**
 ![Chasis 2](https://github.com/user-attachments/assets/95f1f868-d955-4f10-abb5-973fc1276702)
