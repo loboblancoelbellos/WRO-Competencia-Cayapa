@@ -237,11 +237,11 @@ A continuación, se mapean las conexiones entre el microcontrolador ESP32 y los 
 
 | Componente | Pin del Periférico | Pin ESP32 (GPIO) | Observaciones |
 | :--- | :--- | :--- | :--- |
-| **Sensor Ultrasónico (Frontal)** | TRIG <br> ECHO | GPIO 13 <br> GPIO 12 | *ECHO pasa por el Level Shifter (5V -> 3.3V)* |
-| **Sensor Ultrasónico (Izquierdo)** | TRIG <br> ECHO | GPIO 14 <br> GPIO 27 | *ECHO pasa por el Level Shifter (5V -> 3.3V)* |
-| **Sensor Ultrasónico (Derecho)** | TRIG <br> ECHO | GPIO 5 <br> GPIO 18 | *ECHO pasa por el Level Shifter (5V -> 3.3V)* |
-| **Driver L298N (Motor DC)** | ENA (PWM) <br> IN1 <br> IN2 | GPIO 4 <br> GPIO 2 <br> GPIO 16 | *Control de velocidad y sentido del eje trasero* |
-| **Servomotor MG90S** | Señal (PWM) | GPIO 15 | *Control del ángulo de dirección Ackermann* || Señal (PWM) | GPIO XX | *Control de ángulo de dirección Ackermann* |
+| **Sensor Ultrasónico (Frontal)** | TRIG <br> ECHO | GPIO 27 <br> GPIO 14 | *ECHO pasa por el Level Shifter (5V -> 3.3V)* |
+| **Sensor Ultrasónico (Izquierdo)** | TRIG <br> ECHO | GPIO 15 <br> GPIO 2 | *ECHO pasa por el Level Shifter (5V -> 3.3V)* |
+| **Sensor Ultrasónico (Derecho)** | TRIG <br> ECHO | GPIO 13 <br> GPIO 12 | *ECHO pasa por el Level Shifter (5V -> 3.3V)* |
+| **Driver L298N (Motor DC)** | ENA (PWM) <br> IN1 <br> IN2 | GPIO 25 <br> GPIO 33 <br> GPIO 32 | *Control de velocidad y sentido del eje trasero* |
+| **Servomotor MG90S** | Señal (PWM) | GPIO 26 | *Control del ángulo de dirección Ackermann* || Señal (PWM) | GPIO XX | *Control de ángulo de dirección Ackermann* |
 
 ---
 
