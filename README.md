@@ -87,7 +87,7 @@ Tras analizar las limitaciones mecánicas y eléctricas del Prototipo 1.0, redis
 * **Control de Velocidad:** Gobernado a través de señales PWM mediante el controlador Puente H L298N.
 
 ### 3.2. Dirección delantera tipo Ackermann con Rodamientos
-![Servo MG90S](https://github.com/user-attachments/assets/8a5d8723-35ca-40f7-a34a-3fabfd5f0480)
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/37257cf9-22cd-4a7e-a781-ef945c7c521d" />
 
 * **Mecanismo:** Geometría Ackermann equipada con **rodamientos (rolineras)** en los puntos de pivote para minimizar el rozamiento.
 * **Actuador:** Servomotor **MG90S con engranajes metálicos**, evitando desgastes por colisión y garantizando un ángulo de giro suave y rápido.
