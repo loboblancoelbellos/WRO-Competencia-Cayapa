@@ -211,7 +211,7 @@ Heredamos y refinamos el algoritmo de **Control Proporcional-Integrativo-Derivat
 
 > ⚡ **Problema: Caídas de voltaje (Brownouts) al arrancar el motor**
 > * **Causa:** El motor DC exigía un pico de corriente al arrancar que bajaba la tensión por debajo de 3.3V, reiniciando el microcontrolador.
-> * **Solución:** Separamos las líneas de alimentación implementando el LM2596 y añadimos condensadores de desacoplo.
+> * **Solución:** Separamos las líneas de alimentación implementando el LM2596.
 
 > 🔊 **Problema: Lecturas erráticas en los sensores ultrasónicos**
 > * **Causa:** El ruido acústico del aire y la vibración estructural generaban picos de lectura falsos.
