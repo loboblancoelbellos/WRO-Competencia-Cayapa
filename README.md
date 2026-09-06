@@ -31,21 +31,27 @@ Este repositorio documenta el desarrollo integral de nuestro vehículo autónomo
 
 ## 🔄 2. Evolución e Interaciones del Diseño Mecánico
 
-El desarrollo de *Dinoco* ha sido un proceso estrictamente iterativo, donde cada modificación respondió a fallas diagnosticadas durante pruebas dinámicas en pista.
+El desarrollo de Dinoco ha sido un proceso estrictamente iterativo. Esta evolución tiene sus raíces en la temporada pasada, donde cada modificación actual responde directamente a las fallas diagnosticadas mediante pruebas dinámicas en pista durante el año pasado.
 
-### 2.1. Prototipo 1.0: Chasis RC Modificado y Arquitectura Basada en Arduino Mega
+**2.1. Prototipo 1.0 (Modelo 2025): Chasis RC Modificado y Arquitectura Basada en Arduino Mega**
 
-**Motivación y Selección Mecánica Inicial**
-Debido a las restricciones de tiempo en la fase inicial del proyecto, el equipo optó por no diseñar un chasis desde cero. En su lugar, se seleccionó como plataforma de pruebas un chasis comercial de radiocontrol (RC) de dimensiones iniciales de **45 cm de largo por 20 cm de ancho**. Para adecuarlo al reglamento, se redujo la longitud recortando la estructura central.
+**Motivación y Selección Mecánica Inicial (Ciclo 2025)**
 
-* **Sistema de Tracción:** Transmisión por eje posterior rígido hacia ambas ruedas traseras.
-* **Sistema de Dirección:** Servomotor **MG995**, seleccionado por su elevado par de apriete (torque).
+Debido a las restricciones de tiempo en la fase inicial del proyecto para las competencias de 2025, el equipo optó por no diseñar un chasis desde cero. En su lugar, se seleccionó como plataforma de pruebas un chasis comercial de radiocontrol (RC) de dimensiones iniciales de 45 cm de largo por 20 cm de ancho. Para adecuarlo al reglamento de esa temporada, se redujo la longitud recortando la estructura central.
 
-**Diagnóstico Crítico de Fallas (¿Por qué falló el Prototipo 1.0?)**
-1. **Radio de Giro Ineficiente:** Con dimensiones cercanas al límite máximo, el vehículo requería un radio de viraje sumamente amplio, siendo incapaz de completar curvas de 90° cerradas o ejecutar el estacionamiento autónomo.
-2. **Ruido Inductivo (Back-EMF):** El servomotor MG995 inyectaba picos de corriente hacia el pin de señal del Arduino Mega, provocando bloqueos aleatorios del programa.
-3. **Sobrecarga Térmica y Caídas de Tensión (Brownouts):** El regulador LM7805 sufría sobrecalentamiento por la demanda simultánea de los sensores y el servo, ocasionando lecturas erráticas y reinicios constantes.
+Sistema de Tracción: Transmisión por eje posterior rígido hacia ambas ruedas traseras.
 
+Sistema de Dirección: Servomotor MG995, seleccionado por su elevado par de apriete (torque).
+
+**Diagnóstico Crítico de Fallas (¿Por qué se descartó el Prototipo 2025 para el diseño actual?)**
+
+Evaluar el rendimiento de este primer prototipo fue fundamental para sentar las bases mecánicas y electrónicas del modelo que competirá este año. Las principales deficiencias documentadas fueron:
+
+Radio de Giro Ineficiente: Con dimensiones cercanas al límite máximo, el vehículo requería un radio de viraje sumamente amplio, siendo incapaz de completar curvas de 90° cerradas o ejecutar el estacionamiento autónomo.
+
+Ruido Inductivo (Back-EMF): El servomotor MG995 inyectaba picos de corriente hacia el pin de señal del Arduino Mega, provocando bloqueos aleatorios del programa.
+
+Sobrecarga Térmica y Caídas de Tensión (Brownouts): El regulador LM7805 sufría sobrecalentamiento por la demanda simultánea de los sensores y el servo, ocasionando lecturas erráticas y reinicios constantes.
 ---
 
 ### 2.2. Dinoco (Versión 2.0 / Actual): Optimización Dimensional y Upgrade Electrónico
