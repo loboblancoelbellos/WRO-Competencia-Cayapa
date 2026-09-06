@@ -1,8 +1,7 @@
-
 ## **Diagrama Electrico**
 
 
-![circuit_image](https://github.com/user-attachments/assets/71839ff9-3e16-42c5-935b-3d21ed1a766c)
+<img width="624" height="583" alt="DIAGRAMA DINOCO" src="https://github.com/user-attachments/assets/0b882cfa-aef1-483a-92a9-4b54f77824ca" />
 
 
 ## Diagrama de Flujo del CircuitoEste documento presenta un diagrama de flujo que ilustra la lógica operativa de un circuito, basado en la imagen de referencia proporcionada.
