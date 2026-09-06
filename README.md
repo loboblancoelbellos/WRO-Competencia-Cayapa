@@ -22,13 +22,13 @@
 Este repositorio documenta el desarrollo integral de nuestro vehículo autónomo **"Dinoco"**. Como estudiantes de Ingeniería en Electrónica, aplicamos principios de control automático, diseño mecánico e integración de sistemas electromecánicos para cumplir con la normativa oficial de la WRO 2026.
 
 ### Miembros del Equipo
-* **Leontino Jose Medina Di Donato** - *Desarrollo de Software y Algoritmos de Control*
+* **Leontino Jose Medina Di Donato** - *Diseño Mecánico, Modelado e Impresión 3D*
 * **Adriana Carolina Palmar Molero** - *Diseño de Circuitos, Sistema de Potencia y Cableado*
-* **Nilecto Noe Leon Guerere** - *Diseño Mecánico, Modelado e Impresión 3D*
+* **Nilecto Noe Leon Guerere** - *Desarrollo de Software y Algoritmos de Control*
 
 ---
 
-## 🔄 2. Evolución e Iteraciones del Diseño Mecánico
+## 🔄 2. Evolución e Interaciones del Diseño Mecánico
 
 El desarrollo de *Dinoco* ha sido un proceso estrictamente iterativo, donde cada modificación respondió a fallas diagnosticadas durante pruebas dinámicas en pista.
 
