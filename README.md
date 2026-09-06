@@ -226,4 +226,4 @@ A continuación, se mapean las conexiones entre el microcontrolador ESP32 y los 
 ---
 
 ## 📂 8. Guía de Reproducibilidad y Archivos del Repositorio
-*(Aquí puedes continuar con los enlaces a tu código, archivos STL de impresión 3D, etc.)
+*( archivos STL de impresión 3D, etc.)
