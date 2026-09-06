@@ -1,7 +1,6 @@
 # 🚀 WRO 2026 Future Engineers: Equipo Cayapa - Robot "Dinoco"
 
-<img width="960" height="1280" alt="equipo cayapa2026-09-06 at 17 50 50" src="https://github.com/user-attachments/assets/5f3ed0f4-17f1-4fa6-af08-a1def53fc793" />
-
+<img width="500" height="1080" alt="equipo cayapa2026-09-06 at 17 40 40" src="https://github.com/user-attachments/assets/5f3ed0f4-17f1-4fa6-af08-a1def53fc793" />
 
 > *Vehículo autónomo de diseño compacto desarrollado por el equipo **Cayapa** para competir en la categoría Future Engineers de la World Robot Olympiad (WRO) 2026. Diseñado para optimizar el radio de giro, la estabilidad estructural y la velocidad de procesamiento mediante un microcontrolador ESP32 y una matriz de sensores ultrasónicos.*
 
@@ -23,6 +22,9 @@
 Este repositorio documenta el desarrollo integral de nuestro vehículo autónomo **"Dinoco"**. Como estudiantes de Ingeniería en Electrónica, aplicamos principios de control automático, diseño mecánico e integración de sistemas electromecánicos para cumplir con la normativa oficial de la WRO 2026.
 
 ### Miembros del Equipo
+
+* **Dharma Alexandra Peña jimenez** - *Tutora encargada del Equipo*
+-
 * **Leontino Jose Medina Di Donato** - *Diseño Mecánico, Modelado e Impresión 3D*
 * **Adriana Carolina Palmar Molero** - *Diseño de Circuitos, Sistema de Potencia y Cableado*
 * **Nilecto Noe Leon Guerere** - *Desarrollo de Software y Algoritmos de Control*
@@ -31,9 +33,9 @@ Este repositorio documenta el desarrollo integral de nuestro vehículo autónomo
 
 ## 🔄 2. Evolución e Interaciones del Diseño Mecánico
 
-El desarrollo de Dinoco ha sido un proceso estrictamente iterativo. Esta evolución tiene sus raíces en la temporada pasada, donde cada modificación actual responde directamente a las fallas diagnosticadas mediante pruebas dinámicas en pista durante el año pasado.
+El desarrollo de *Dinoco* ha sido un proceso estrictamente iterativo, donde cada modificación respondió a fallas diagnosticadas durante pruebas dinámicas en pista.
 
-**2.1. Prototipo 1.0 (Modelo 2025): Chasis RC Modificado y Arquitectura Basada en Arduino Mega**
+### 2.1. Prototipo 1.0: Chasis RC Modificado y Arquitectura Basada en Arduino Mega
 
 **Motivación y Selección Mecánica Inicial (Ciclo 2025)**
 
@@ -60,17 +62,20 @@ Sobrecarga Térmica y Caídas de Tensión (Brownouts): El regulador LM7805 sufr�
 Tras analizar las limitaciones mecánicas y eléctricas del Prototipo 1.0, rediseñamos la plataforma desde cero para crear **Dinoco 2.0**, enfocándonos en la ergonomía, la velocidad de procesamiento y la modularidad.
 
 **Vista del Chasis Actual:**
-
+-
 <img width="1280" height="720" alt="carrito 2026-09-06 at 17 45 28" src="https://github.com/user-attachments/assets/17bf026b-2edc-4e55-b8d5-af26b3677a9d" />
 
-
+---
 **Ensamblaje de Componentes:**
+
 
 <img width="700" height="900" alt="adriana ensamblando 2026-09-06 at 17 45 37" src="https://github.com/user-attachments/assets/1cf71c6b-20a4-48c0-9acb-80939633c7cf" />
 
-<img width="958" height="1280" alt="leontino ensamblando 2026-09-06 at 17 44 20" src="https://github.com/user-attachments/assets/960e2898-cf7f-4d44-b53a-16cfc8f6e16f" />
+---
 
+<img width="700" height="900" alt="leontino ensamblando 2026-09-06 at 17 44 20" src="https://github.com/user-attachments/assets/960e2898-cf7f-4d44-b53a-16cfc8f6e16f" />
 
+---
 
 * **Reducción Ergonométrica:** La longitud pasó de 45 cm a un tamaño compacto entre **23 cm y 25 cm**, y el ancho se optimizó a **15 cm**. Esta disminución drástica del volumen mejora significativamente la maniobrabilidad del robot dentro de los carriles de la pista.
 * **Dirección Simplificada con Rodamientos:** Se rediseñó el tren delantero integrando **rodamientos (rolineras)** en las manguetas de dirección. Esto reduce drásticamente la fricción mecánica y elimina el juego holgado.
@@ -87,7 +92,7 @@ Tras analizar las limitaciones mecánicas y eléctricas del Prototipo 1.0, redis
 * **Control de Velocidad:** Gobernado a través de señales PWM mediante el controlador Puente H L298N.
 
 ### 3.2. Dirección delantera tipo Ackermann con Rodamientos
-<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/37257cf9-22cd-4a7e-a781-ef945c7c521d" />
+![Servo MG90S](https://github.com/user-attachments/assets/8a5d8723-35ca-40f7-a34a-3fabfd5f0480)
 
 * **Mecanismo:** Geometría Ackermann equipada con **rodamientos (rolineras)** en los puntos de pivote para minimizar el rozamiento.
 * **Actuador:** Servomotor **MG90S con engranajes metálicos**, evitando desgastes por colisión y garantizando un ángulo de giro suave y rápido.
@@ -148,7 +153,7 @@ Para el diseño de **Dinoco 2.0**, realizamos una reestructuración completa de 
 
 ### 4.3. Actuadores y Mecánica de Tracción
 
-**Puente H L298N**
+**Motor DC Makeblock 9V (185 RPM) y Puente H L298N**
 ![Motor y L298N](https://github.com/user-attachments/assets/c998e194-728f-4ca4-acd2-dbf268346189)
 
 * **Función y Ubicación:** El motor provee la tracción en el eje trasero sólido. El driver L298N controla su sentido de giro y velocidad mediante PWM.
