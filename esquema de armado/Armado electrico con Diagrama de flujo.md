@@ -55,6 +55,3 @@ graph TD
     
     O --> G
 ```
-    L --> M[Ajustar Ángulo Servomotor MG90S]
-    M --> G
-```
