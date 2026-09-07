@@ -78,6 +78,10 @@ Tras analizar las limitaciones mecánicas y eléctricas del Prototipo 1.0, redis
 
 ---
 
+<img width="866" height="902" alt="WhatsApp Image 2026-09-06 at 21 21 08" src="https://github.com/user-attachments/assets/ef381578-e316-4b97-a6aa-f1714d840878" />
+
+---
+
 * **Reducción Ergonométrica:** La longitud pasó de 45 cm a un tamaño compacto entre **23 cm y 25 cm**, y el ancho se optimizó a **15 cm**. Esta disminución drástica del volumen mejora significativamente la maniobrabilidad del robot dentro de los carriles de la pista.
 * **Dirección Simplificada con Rodamientos:** Se rediseñó el tren delantero integrando **rodamientos (rolineras)** en las manguetas de dirección. Esto reduce drásticamente la fricción mecánica y elimina el juego holgado.
 * **Migración al ESP32 + Shield Expansor:** Reemplazamos el Arduino Mega por un **ESP32** montado sobre una placa de expansión de pines, aprovechando su arquitectura Dual-Core a 240 MHz para el procesamiento del algoritmo PID.
