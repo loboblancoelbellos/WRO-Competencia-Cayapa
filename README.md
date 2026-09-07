@@ -260,3 +260,12 @@ A continuación, se mapean las conexiones entre el microcontrolador ESP32 y los 
 <img width="1015" height="767" alt="WhatsApp Image 2026-09-06 at 7 58 35 PM" src="https://github.com/user-attachments/assets/ee570580-f0c0-4eba-84be-656a86f92799" />
 <img width="1027" height="757" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (1)" src="https://github.com/user-attachments/assets/ad485d07-f50b-4fb6-b737-c08e7124e2e8" />
 
+## 🏁 . Demostración en Pista (Pruebas Dinámicas)
+
+El siguiente video documenta una de las pruebas de navegación autónoma exitosas de **Dinoco 2.0**. En él se puede observar la respuesta en tiempo real del algoritmo PID manteniendo el vehículo centrado en el carril y ejecutando los giros utilizando la geometría Ackermann.
+
+> **▶️ [VIDEO DE DEMOSTRACIÓN]** > *(
+
+https://github.com/user-attachments/assets/c235062e-5041-47fe-a08f-28b0c7b19106
+
+)*
