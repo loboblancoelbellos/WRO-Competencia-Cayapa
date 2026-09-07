@@ -25,7 +25,7 @@ Este repositorio documenta el desarrollo integral de nuestro vehículo autónomo
 ### Miembros del Equipo
 
 * **Dharma Alexandra Peña jimenez** - *Tutora encargada del Equipo*
--
+
 * **Leontino Jose Medina Di Donato** - *Diseño Mecánico, Modelado e Impresión 3D*
 * **Adriana Carolina Palmar Molero** - *Diseño de Circuitos, Sistema de Potencia y Cableado*
 * **Nilecto Noe Leon Guerere** - *Desarrollo de Software y Algoritmos de Control*
