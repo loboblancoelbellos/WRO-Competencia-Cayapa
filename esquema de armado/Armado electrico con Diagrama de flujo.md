@@ -11,10 +11,41 @@
 
 **Explicación Detallada del Diagrama de Flujo**:El diagrama de flujo desglosa los pasos inferidos del funcionamiento del circuito:Inicio:Representa el punto de partida para la secuencia de operaciones del circuito.
 
-**ENCENDIDO**:Se refiere al momento en que el circuito recibe energía. Basado en la imagen original, esto se logra a través de las baterías de iones de litio (18650 Li-ion).Verificar Voltaje de Batería:Aunque no se visualiza un componente específico para esta tarea en el circuito, se asume como una buena práctica. La lógica aquí es asegurar que la fuente de energía sea adecuada para el funcionamiento continuo.Voltaje OK: Si el nivel de voltaje es suficiente, el sistema procede a inicializar el microcontrolador.Voltaje Bajo: Si el voltaje es crítico, el sistema podría emitir una advertencia visual o sonora, o incluso apagarse para proteger los componentes y prolongar la vida útil de las baterías.
+Este apartado detalla la secuencia operativa del circuito integrado del vehículo autónomo, reflejando la transición hacia el procesamiento avanzado del ESP32 y el control PID.
 
-**Inicializar Arduino UNO**:El corazón del circuito, el microcontrolador Arduino UNO, comienza su secuencia de arranque. Esto incluye la configuración de sus puertos (pines de entrada/salida) y la preparación para la ejecución del código.Inicializar Sensores Ultrasónicos Los tres sensores HC-SR04 se configuran para su función principal: emitir pulsos de sonido y medir el tiempo que tardan en regresar para calcular distancias.Inicializar Servo Motor El servo motor se establece en una posición predeterminada, que generalmente es su punto central o una posición de reposo inicial. Inicializar Controlador de Motor El módulo controlador de motor L298N se prepara para recibir señales del Arduino y controlar el motor de corriente continua (DC).
+### Explicación Detallada del Flujo:
 
-**Iniciar Bucle Principal**:El programa del Arduino entra en un ciclo de ejecución continuo. Este bucle es crucial, ya que permite que el circuito opere de forma autónoma y reactiva.Leer Distancia del Sensor 1, 2, 3:Dentro del bucle principal, cada sensor ultrasónico realiza una lectura de distancia. Estas lecturas son fundamentales para la detección de objetos.Obstáculo Detectado?
+* **Inicio y Encendido (Gestión de Energía):** Representa el punto de partida. El sistema se alimenta de un paquete de 3 baterías 18650 (11.1V). La energía se distribuye a través de dos interruptores: uno dirige el voltaje crudo al módulo de potencia L298N para máxima tracción, y el otro hacia el regulador de voltaje LM2596.
+* **Acondicionamiento de Voltaje (Buck Converter):** El módulo LM2596 reduce y estabiliza los 11.1V a un bus seguro de 5V para alimentar los sensores, el servomotor y la placa de expansión.
+* **Inicialización del Microcontrolador (ESP32):** El procesador arranca y configura sus pines GPIO. Como opera con lógica de 3.3V, se establece la comunicación segura con los sensores (que operan a 5V) a través del conversor de nivel lógico bidireccional.
+* **Inicialización de Periféricos:** Los sensores ultrasónicos HC-SR04 se preparan para emitir pulsos. El servomotor MG90S se calibra en su punto muerto central (dirección recta) y el controlador L298N se habilita para gestionar el motor DC de tracción.
+* **Bucle Principal (Control de Navegación):** El programa entra en un ciclo de ejecución continuo, vital para la autonomía del vehículo.
+* **Lectura y Filtrado de Sensores:** Se consultan los sensores frontal y laterales. Se aplica un filtro de media móvil por software para descartar picos de ruido acústico o lecturas falsas.
+* **Evaluación de Entorno (Algoritmo PID):** 
+  * **Cálculo de Error:** El ESP32 calcula la diferencia de distancias laterales para determinar la desviación del centro del carril ($Error = Distancia Izquierda - Distancia Derecha$).
+  * **Corrección de Trayectoria:** La salida del algoritmo PID ajusta dinámicamente el ángulo del servomotor (geometría Ackermann) para recentrar el vehículo.
+  * **Control de Velocidad:** Si el sensor frontal detecta una pared o esquina próxima, se reduce la señal PWM enviada al motor DC para maniobrar de forma segura; si el camino está libre, se mantiene la velocidad de crucero.
+* **Retorno del Bucle:** El sistema regresa inmediatamente al paso de lectura de sensores, garantizando una alta frecuencia de muestreo y correcciones en tiempo real.
 
-Este es un punto de decisión crítico. El sistema procesa las lecturas de los sensores para determinar si hay algún objeto dentro de un rango de proximidad que requiera una acción.Sí Si se identifica un obstáculo Mover Servo Motor El servo motor ajusta su posición. Esto podría ser para reorientar un sensor, activar una parte móvil o iniciar una acción de evasión.Controlar Motor DC a Través del Controlador: El motor DC se activa o se le da una instrucción (por ejemplo, avanzar, detenerse, retroceder, girar) para reaccionar al obstáculo.Esperar / Retrasar: Una breve pausa permite que las acciones iniciadas se completen o para estabilizar el sistema antes de la siguiente iteración de lectura.No: Si no se detectan obstáculos, el sistema simplemente continúa su proceso de monitoreo.Bucle Independientemente del resultado de la detección de obstáculos, el flujo regresa al paso de lectura de distancias. Esto asegura un monitoreo constante del entorno y una capacidad de respuesta en tiempo real del circuito.
+### 📊 Representación Visual
+
+```mermaid
+graph TD
+    A[Inicio: Encendido Baterías 18650] --> B{Interruptores}
+    B -->|Switch 1| C[Voltaje Directo 11.1V a L298N]
+    B -->|Switch 2| D[Regulador LM2596 reduce a 5V]
+    D --> E[Inicializar ESP32 a 3.3V]
+    E --> F[Inicializar Periféricos: Servo, Sensores y Motor]
+    F --> G((Bucle Principal))
+    
+    G --> H[Leer y Filtrar Sensores Ultrasónicos]
+    H --> I{¿Pared frontal cercana?}
+    I -->|Sí| J[Reducir PWM Motor DC / Frenar]
+    I -->|No| K[Mantener velocidad crucero]
+    
+    J --> L[Cálculo de Error PID: Lateral Izq - Der]
+    K --> L
+    
+    L --> M[Ajustar Ángulo Servomotor MG90S]
+    M --> G
+```
