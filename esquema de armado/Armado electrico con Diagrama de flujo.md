@@ -4,7 +4,7 @@
 <img width="624" height="583" alt="DIAGRAMA DINOCO" src="https://github.com/user-attachments/assets/0b882cfa-aef1-483a-92a9-4b54f77824ca" />
 
 
-## Diagrama de Flujo del CircuitoEste documento presenta un diagrama de flujo que ilustra la lógica operativa de un circuito, basado en la imagen de referencia proporcionada.
+## Diagrama de Flujo del Circuito : este documento presenta un diagrama de flujo que ilustra la lógica operativa de un circuito, basado en la imagen de referencia proporcionada.
 
 
 
