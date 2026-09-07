@@ -1,3 +1,4 @@
+
 # 🚀 WRO 2026 Future Engineers: Equipo Cayapa - Robot "Dinoco"
 
 <img width="800" height="1080" alt="equipo cayapa2026-09-06 at 17 40 40" src="https://github.com/user-attachments/assets/5f3ed0f4-17f1-4fa6-af08-a1def53fc793" />
@@ -247,3 +248,14 @@ A continuación, se mapean las conexiones entre el microcontrolador ESP32 y los 
 
 ## 📂 8. Guía de Reproducibilidad y Archivos del Repositorio
 *( archivos STL de impresión 3D, etc.)
+<img width="1017" height="761" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM" src="https://github.com/user-attachments/assets/c7a4abef-6733-4fe5-a213-e5cf82d0b84e" />
+<img width="1017" height="762" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (9)" src="https://github.com/user-attachments/assets/c564897c-9a5f-4c65-85ae-d1d0399ae834" />
+<img width="1022" height="763" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (8)" src="https://github.com/user-attachments/assets/bac2ce1c-5610-449b-846e-d2791b75d907" />
+<img width="1023" height="761" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (7)" src="https://github.com/user-attachments/assets/dd5a533e-f80b-4b7a-a76b-0a599755b586" />
+<img width="1023" height="758" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (6)" src="https://github.com/user-attachments/assets/8ed62972-69ee-416f-8cee-5f832434c84e" />
+<img width="1018" height="762" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (5)" src="https://github.com/user-attachments/assets/a4c344bc-c646-4062-bc3c-24eb01402ba6" />
+<img width="1021" height="771" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (4)" src="https://github.com/user-attachments/assets/c4759f0d-7a7b-4b9c-841d-c3c377131d67" />
+<img width="1023" height="761" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (3)" src="https://github.com/user-attachments/assets/8ed91d1b-4361-4c11-8b1c-a2a5a8daf3c1" />
+<img width="1007" height="762" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (2)" src="https://github.com/user-attachments/assets/6d326884-1a5e-4521-b49a-b249676d4af9" />
+<img width="1015" height="767" alt="WhatsApp Image 2026-09-06 at 7 58 35 PM" src="https://github.com/user-attachments/assets/ee570580-f0c0-4eba-84be-656a86f92799" />
+<img width="1027" height="757" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (1)" src="https://github.com/user-attachments/assets/ad485d07-f50b-4fb6-b737-c08e7124e2e8" />
