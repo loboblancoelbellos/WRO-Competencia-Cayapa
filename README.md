@@ -247,7 +247,7 @@ A continuación, se mapean las conexiones entre el microcontrolador ESP32 y los 
 ---
 
 ## 📂 8. Guía de Reproducibilidad y Archivos del Repositorio
-*( archivos STL de impresión 3D, etc.)
+*( archivos STL de impresión 3D, etc.) 
 <img width="1017" height="761" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM" src="https://github.com/user-attachments/assets/c7a4abef-6733-4fe5-a213-e5cf82d0b84e" />
 <img width="1017" height="762" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (9)" src="https://github.com/user-attachments/assets/c564897c-9a5f-4c65-85ae-d1d0399ae834" />
 <img width="1022" height="763" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (8)" src="https://github.com/user-attachments/assets/bac2ce1c-5610-449b-846e-d2791b75d907" />
@@ -259,3 +259,4 @@ A continuación, se mapean las conexiones entre el microcontrolador ESP32 y los 
 <img width="1007" height="762" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (2)" src="https://github.com/user-attachments/assets/6d326884-1a5e-4521-b49a-b249676d4af9" />
 <img width="1015" height="767" alt="WhatsApp Image 2026-09-06 at 7 58 35 PM" src="https://github.com/user-attachments/assets/ee570580-f0c0-4eba-84be-656a86f92799" />
 <img width="1027" height="757" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM (1)" src="https://github.com/user-attachments/assets/ad485d07-f50b-4fb6-b737-c08e7124e2e8" />
+
