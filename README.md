@@ -20,15 +20,21 @@
 
 ## 👥 1. Introducción y Datos del Equipo
 
-Este repositorio documenta el desarrollo integral de nuestro vehículo autónomo **"Dinoco"**. Como estudiantes de Ingeniería en Electrónica, aplicamos principios de control automático, diseño mecánico e integración de sistemas electromecánicos para cumplir con la normativa oficial de la WRO 2026.
+Este repositorio documenta el desarrollo integral de nuestro vehículo autónomo **"Dinoco"**. Como estudiantes de Ingeniería en Electrónica, aplicamos principios de control automático, diseño mecánico e integración de sistemas electromecánicos para cumplir con la estricta normativa oficial de la WRO 2026.
 
 ### Miembros del Equipo
 
-* **Dharma Alexandra Peña jimenez** - *Tutora encargada del Equipo*
+* **Dharma Alexandra Peña Jimenez** - *Tutora y Directora del Proyecto*
+  Encargada de la planificación estratégica, gestión de recursos y supervisión general. Su liderazgo fue clave para mantener al equipo enfocado en los objetivos técnicos y asegurar el cumplimiento del cronograma de cara a la competencia.
 
 * **Leontino Jose Medina Di Donato** - *Diseño Mecánico, Modelado e Impresión 3D*
+  Especialista en CAD y manufactura aditiva. Su trabajo se centró en la optimización topológica del chasis, la reducción del volumen para mejorar el radio de giro y el diseño de piezas con tolerancias milimétricas para integrar el sistema de rodamientos.
+
 * **Adriana Carolina Palmar Molero** - *Diseño de Circuitos, Sistema de Potencia y Cableado*
+  Responsable de la arquitectura de hardware. Desarrolló el diagrama esquemático, seleccionó los componentes de regulación térmica (Buck Converter, Level Shifter) y garantizó un ruteo de cables limpio, seguro y resistente a las vibraciones de la pista.
+
 * **Nilecto Noe Leon Guerere** - *Desarrollo de Software y Algoritmos de Control*
+  Arquitecto del código fuente. Aprovechó la capacidad del ESP32 para implementar un control PID de alta frecuencia, diseñando algoritmos de filtrado de señales ultrasónicas para garantizar una navegación fluida, reactiva y 100% autónoma.
 
 ---
 
@@ -250,6 +256,19 @@ A continuación, se mapean las conexiones entre el microcontrolador ESP32 y los 
 
 ---
 
+### 7.4. Diagramas de Hojas Técnicas (Datasheets)
+Para justificar las decisiones de diseño y los límites de operación eléctrica, nos basamos en la documentación oficial (Datasheets) de nuestros componentes de mayor impacto estructural:
+
+**Microcontrolador ESP32 (Arquitectura de Pines)**
+> *[ARRASTRA AQUÍ LA IMAGEN DEL PINOUT OFICIAL DEL ESP32]*
+* **Justificación técnica:** Este diagrama valida nuestra distribución de señales PWM por hardware y las entradas tolerantes exclusivamente a 3.3V, lo que determinó el uso del conversor lógico.
+
+**Driver de Motor L298N (Diagrama de Bloques Interno)**
+> *[ARRASTRA AQUÍ LA IMAGEN DEL DATASHEET DEL L298N]*
+* **Justificación técnica:** El esquema interno de puentes H bipolares demuestra su capacidad para soportar los picos de corriente del motor DC sin afectar el bus de voltaje lógico.
+
+---
+
 ## 📂 8. Guía de Reproducibilidad y Archivos del Repositorio
 *( archivos STL de impresión 3D, etc.) 
 <img width="1017" height="761" alt="WhatsApp Image 2026-09-06 at 7 58 36 PM" src="https://github.com/user-attachments/assets/c7a4abef-6733-4fe5-a213-e5cf82d0b84e" />
@@ -274,24 +293,34 @@ https://github.com/user-attachments/assets/c235062e-5041-47fe-a08f-28b0c7b19106
 
 ___
 
-##  . Fotos del carro ya completamente armado 
+## 🚀. Visión Futurista: Concepto de Diseño 3D
 
-<img width="700" height="400" alt="WhatsApp Image 2026-09-11 at 17 52 04" src="https://github.com/user-attachments/assets/eb35dbe3-466b-41ab-8b5f-30c6e2df9718" />
+Para explorar la evolución estética y funcional de la robótica autónoma, desarrollamos un renderizado 3D de un chasis conceptual futurista. Este diseño imagina cómo se vería la tecnología de "Dinoco" aplicada en vehículos aerodinámicos de próxima generación.
 
-<img width="700" height="400" alt="WhatsApp Image 29-11 at 17 52 04" src="https://github.com/user-attachments/assets/1b0cb004-46ba-451a-9f5a-2711775436e2" />
+> *[ARRASTRA O PEGA AQUÍ TU VIDEO/IMAGEN DEL DISEÑO 3D FUTURISTA]*
 
-<img width="700" height="400" alt="WhatsApp Image 2026-09at 17 52 04" src="https://github.com/user-attachments/assets/644528f4-cf40-4cab-b9a0-53a6a1b2636b" />
+---
 
-<img width="700" height="400" alt="WhatsApp Image 202652 05" src="https://github.com/user-attachments/assets/b39952a0-d64e-4f4f-af3c-dc8c11226c48" />
+## 📸. Galería: Vehículo Ensamblado (Ready to Race)
 
-<img width="700" height="400" alt="WhatsApp Image 202617 52 05" src="https://github.com/user-attachments/assets/3894c706-90b4-4035-89df-25a97e58e746" />
+A continuación, se presenta el resultado final del desarrollo: **Dinoco 2.0** completamente ensamblado, cableado y listo para las pruebas oficiales de la WRO 2026.
 
-<img width="607" height="1080" alt="WhatsApp Image 20 at 17 52 05" src="https://github.com/user-attachments/assets/81cfcc1f-d2e1-4fc9-902f-14a82b059458" />
-
-<img width="607" height="1080" alt="WhatsApp Image 20 at 17 52 05" src="https://github.com/user-attachments/assets/067b5ceb-3a21-4756-afc7-5a26d17dcdb3" />
-
-<img width="700" height="400" alt="WhatsApp I 2026-09-11 at 17 52 06" src="https://github.com/user-attachments/assets/869393e0-f834-4f46-97e9-888ffba258b0" />
-
-
-
-
+<div align="center">
+  <img width="48%" src="https://github.com/user-attachments/assets/eb35dbe3-466b-41ab-8b5f-30c6e2df9718" alt="Carro Listo 1"/>
+  <img width="48%" src="https://github.com/user-attachments/assets/1b0cb004-46ba-451a-9f5a-2711775436e2" alt="Carro Listo 2"/>
+</div>
+<br>
+<div align="center">
+  <img width="48%" src="https://github.com/user-attachments/assets/644528f4-cf40-4cab-b9a0-53a6a1b2636b" alt="Carro Listo 3"/>
+  <img width="48%" src="https://github.com/user-attachments/assets/b39952a0-d64e-4f4f-af3c-dc8c11226c48" alt="Carro Listo 4"/>
+</div>
+<br>
+<div align="center">
+  <img width="48%" src="https://github.com/user-attachments/assets/3894c706-90b4-4035-89df-25a97e58e746" alt="Carro Listo 5"/>
+  <img width="48%" src="https://github.com/user-attachments/assets/869393e0-f834-4f46-97e9-888ffba258b0" alt="Carro Listo 6"/>
+</div>
+<br>
+<div align="center">
+  <img width="48%" src="https://github.com/user-attachments/assets/81cfcc1f-d2e1-4fc9-902f-14a82b059458" alt="Carro Listo Detalle 1"/>
+  <img width="48%" src="https://github.com/user-attachments/assets/067b5ceb-3a21-4756-afc7-5a26d17dcdb3" alt="Carro Listo Detalle 2"/>
+</div>
