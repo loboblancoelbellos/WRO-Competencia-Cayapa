@@ -155,6 +155,7 @@ Para el diseño de **Dinoco 2.0**, realizamos una reestructuración completa de 
 * **Desventajas:** Puede introducir un leve ruido de conmutación de alta frecuencia en la línea de alimentación.
 
 **Baterías 18650 (x3) y Portabaterías (Holder)**
+
 ![Baterías 18650](https://http2.mlstatic.com/D_NQ_NP_881915-MLV71037692218_082023-O.webp)
 
 * **Función y Ubicación:** Fuente de energía principal. Alojadas en la parte inferior trasera del chasis para mantener el centro de gravedad bajo.
@@ -193,6 +194,7 @@ Para el diseño de **Dinoco 2.0**, realizamos una reestructuración completa de 
 ### 4.4. Sensores de Entorno
 
 **Matriz de Sensores Ultrasónicos HC-SR04 (x3)**
+
 ![Sensor HC-SR04](https://github.com/user-attachments/assets/902c8c8b-0308-4dfd-9ffe-1c58e8a6bf10)
 
 * **Función y Ubicación:** Sistema de detección primario. Uno frontal para detectar esquinas/muros finales y dos laterales para el control PID de seguimiento de carril.
