@@ -263,11 +263,15 @@ A continuación, se mapean las conexiones entre el microcontrolador ESP32 y los 
 Para justificar las decisiones de diseño y los límites de operación eléctrica, nos basamos en la documentación oficial (Datasheets) de nuestros componentes de mayor impacto estructural:
 
 **Microcontrolador ESP32 (Arquitectura de Pines)**
-> *[ARRASTRA AQUÍ LA IMAGEN DEL PINOUT OFICIAL DEL ESP32]*
+
+> <img width="1000" height="1000" alt="pinout-1 esp 30 pines" src="https://github.com/user-attachments/assets/656a0ff9-fe82-4d37-b03c-d7a9939d3051" />
+
 * **Justificación técnica:** Este diagrama valida nuestra distribución de señales PWM por hardware y las entradas tolerantes exclusivamente a 3.3V, lo que determinó el uso del conversor lógico.
 
 **Driver de Motor L298N (Diagrama de Bloques Interno)**
-> *[ARRASTRA AQUÍ LA IMAGEN DEL DATASHEET DEL L298N]*
+
+> <img width="1218" height="678" alt="Modulo-L298N-esquema" src="https://github.com/user-attachments/assets/e9dfdefa-56d1-4237-86a3-07f96b82cbac" />
+
 * **Justificación técnica:** El esquema interno de puentes H bipolares demuestra su capacidad para soportar los picos de corriente del motor DC sin afectar el bus de voltaje lógico.
 
 ---
@@ -300,7 +304,11 @@ ___
 
 Para explorar la evolución estética y funcional de la robótica autónoma, desarrollamos un renderizado 3D de un chasis conceptual futurista. Este diseño imagina cómo se vería la tecnología de "Dinoco" aplicada en vehículos aerodinámicos de próxima generación.
 
-> *[ARRASTRA O PEGA AQUÍ TU VIDEO/IMAGEN DEL DISEÑO 3D FUTURISTA]*
+> 
+
+https://github.com/user-attachments/assets/c4d43db5-b08f-4474-97ba-1ebe588d0caf
+
+
 
 ---
 
