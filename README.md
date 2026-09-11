@@ -271,3 +271,27 @@ El siguiente video documenta una de las pruebas de navegación autónoma exitosa
 > **▶️ [VIDEO DE DEMOSTRACIÓN]** >
 
 https://github.com/user-attachments/assets/c235062e-5041-47fe-a08f-28b0c7b19106
+
+___
+
+##  . Fotos del carro ya completamente armado 
+
+<img width="700" height="400" alt="WhatsApp Image 2026-09-11 at 17 52 04" src="https://github.com/user-attachments/assets/eb35dbe3-466b-41ab-8b5f-30c6e2df9718" />
+
+<img width="700" height="400" alt="WhatsApp Image 29-11 at 17 52 04" src="https://github.com/user-attachments/assets/1b0cb004-46ba-451a-9f5a-2711775436e2" />
+
+<img width="700" height="400" alt="WhatsApp Image 2026-09at 17 52 04" src="https://github.com/user-attachments/assets/644528f4-cf40-4cab-b9a0-53a6a1b2636b" />
+
+<img width="700" height="400" alt="WhatsApp Image 202652 05" src="https://github.com/user-attachments/assets/b39952a0-d64e-4f4f-af3c-dc8c11226c48" />
+
+<img width="700" height="400" alt="WhatsApp Image 202617 52 05" src="https://github.com/user-attachments/assets/3894c706-90b4-4035-89df-25a97e58e746" />
+
+<img width="607" height="1080" alt="WhatsApp Image 20 at 17 52 05" src="https://github.com/user-attachments/assets/81cfcc1f-d2e1-4fc9-902f-14a82b059458" />
+
+<img width="607" height="1080" alt="WhatsApp Image 20 at 17 52 05" src="https://github.com/user-attachments/assets/067b5ceb-3a21-4756-afc7-5a26d17dcdb3" />
+
+<img width="700" height="400" alt="WhatsApp I 2026-09-11 at 17 52 06" src="https://github.com/user-attachments/assets/869393e0-f834-4f46-97e9-888ffba258b0" />
+
+
+
+
