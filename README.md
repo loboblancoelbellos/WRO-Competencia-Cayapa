@@ -300,18 +300,6 @@ https://github.com/user-attachments/assets/c235062e-5041-47fe-a08f-28b0c7b19106
 
 ___
 
-## 🚀. Visión Futurista: Concepto de Diseño 3D
-
-Para explorar la evolución estética y funcional de la robótica autónoma, desarrollamos un renderizado 3D de un chasis conceptual futurista. Este diseño imagina cómo se vería la tecnología de "Dinoco" aplicada en vehículos aerodinámicos de próxima generación.
-
-> 
-
-https://github.com/user-attachments/assets/c4d43db5-b08f-4474-97ba-1ebe588d0caf
-
-
-
----
-
 ## 📸. Galería: Vehículo Ensamblado (Ready to Race)
 
 A continuación, se presenta el resultado final del desarrollo: **Dinoco 2.0** completamente ensamblado, cableado y listo para las pruebas oficiales de la WRO 2026.
