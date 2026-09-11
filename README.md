@@ -166,6 +166,7 @@ Para el diseño de **Dinoco 2.0**, realizamos una reestructuración completa de 
 ### 4.3. Actuadores y Mecánica de Tracción
 
 ** Puente H L298N**
+
 ![Motor y L298N](https://github.com/user-attachments/assets/c998e194-728f-4ca4-acd2-dbf268346189)
 
 * **Función y Ubicación:** El motor provee la tracción en el eje trasero sólido. El driver L298N controla su sentido de giro y velocidad mediante PWM.
