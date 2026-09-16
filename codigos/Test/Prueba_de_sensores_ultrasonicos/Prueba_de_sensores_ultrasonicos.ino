@@ -7,7 +7,7 @@ const int echoIzq = 2;
 
 // Sensor Ultrasónico Central (Delantero)
 const int trigCentral = 27;
-const int echoCentral = 5;
+const int echoCentral = 14;
 
 // Sensor Ultrasónico Derecho
 const int trigDer = 13;
